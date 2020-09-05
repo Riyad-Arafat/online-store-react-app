@@ -28,7 +28,7 @@ class Slider extends Component {
         // Centerarl The Main slide
         $($slides).css("left", ($i * $x)+"%");
     
-    }
+    };
 
     nextSlide = (e) => {
         const $slides       = $($(e.target).offsetParent()).find('.slides');
@@ -55,7 +55,7 @@ class Slider extends Component {
             $($next_img).addClass("show")
         }
     };
-    prevSlide(e){
+    prevSlide = (e) => {
         const $slides       = $($(e.target).offsetParent()).find('.slides');
         const $now_img      = $slides.find(".show");
         var $prev_img       = $now_img.prev(),
@@ -91,20 +91,22 @@ class Slider extends Component {
         return(
             
             <Fragment>
-                <div className="container">
-                    <div id="slider" className="shadow rounded">
-                        <div className="next-btn btn" onClick={this.nextSlide}><i className="fas fa-chevron-right"></i></div>
-                        <div className="slides">
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
-                            <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                <div className="img-slider">
+                    <div className="container">
+                        <div id="slider" className="shadow rounded">
+                            <i className=" next-btn fas fa-chevron-right"  onClick={this.nextSlide}></i>
+                            <div className="slides">
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                                <div className="slide-item"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt=""/></div>
+                            </div>
+                            <i className="prev-btn fas fa-chevron-left" onClick={this.prevSlide}></i>
                         </div>
-                        <div className="prev-btn btn" onClick={this.prevSlide}><i className="fas fa-chevron-left"></i></div>
                     </div>
                 </div>
             </Fragment>

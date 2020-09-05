@@ -34,28 +34,25 @@
 }
 
 #slider .next-btn{
-    position: absolute;
     right: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 #slider .prev-btn{
-    position: absolute;
     left: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
 }
 
 #slider .next-btn,
 #slider .prev-btn{
-    background-color: #0000001f;
-    z-index: 1;
-    font-size: 45px;
-    height: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
     display: flex;
     align-self: center;
+    z-index: 1;
+    font-size: 45px;
+    height: 100%;
+    padding: 13px 8px;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
 }

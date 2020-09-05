@@ -1,0 +1,45 @@
+#top-category-section{
+    margin-top: 25px;
+}
+
+#top-category-section a{
+    color: #000000;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.g-view{
+    overflow-wrap: anywhere;
+}
+
+.g-title{
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 11px;
+    border-block-start: 2px solid #2c97ff;
+}
+
+.g-content{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    position: relative;
+    margin: auto;
+}
+.g-row{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.g-item{
+    padding: 5px;
+}
+
+.g-item img{
+    width: 100%;
+    display: inline-block;
+}

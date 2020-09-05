@@ -1,0 +1,126 @@
+.my-container{
+    width: 85%;
+}
+
+.my-row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.my-card{
+    min-width: 243px;
+    border-radius: 0.25em;
+}
+
+.my-card-img{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.my-card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.my-card .card-body{
+    padding: 0.35rem;
+}
+
+.section-title{
+    display: inline-block;
+    font-size: 25pt;
+    margin-bottom: 1rem;
+    border-block-end: 2px solid;
+    border-color: #329dff;
+}
+
+.slide-container{
+    position: relative;
+    display: flex;
+}
+
+.slide-arrow {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    clear: both;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+}
+
+.slide-arrow .next-btn{
+    float: right!important;
+}
+
+.slide-arrow .prev-btn{
+    float: left!important;
+}
+
+
+#p-products{
+    font-size: 10pt;
+}
+
+#p-products .slides{
+    overflow-y: hidden;
+    overflow-x: auto;
+    transition: 0.25s all ease-in-out;
+
+}
+
+#p-products .slides::-webkit-scrollbar{
+    display: none;
+}
+
+#p-products .slides{
+    -ms-overflow-style: hidden;
+    scrollbar-width: none;
+}
+
+#p-products .prev-btn,
+#p-products .next-btn{
+    background-color: #282834ad;
+    color: #ffffff;
+    border-radius: 100%;
+    padding: 0px 20px;
+    font-size: 25pt;
+}
+
+#p-products .my-card{
+    min-height: 400px;
+    margin: 5px;
+}
+
+#p-products .my-card-img{
+    height: 200px;
+}
+
+#p-products .my-card .card-body div{
+    flex: 100% 0 0;
+}
+
+#p-products .my-card .card-title{
+    font-size: 15pt;
+}
+
+#p-products .my-card .card-body{
+    padding: 0.35rem;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    overflow-wrap: anywhere;
+}
+
+
+.price {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #0054ec;
+}
