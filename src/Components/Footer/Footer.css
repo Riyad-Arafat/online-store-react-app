@@ -1,0 +1,31 @@
+.footer{
+    background: #dadada;
+    margin-top: 60px;
+    padding-top: 31px;
+    width: 100%;
+}
+
+.footer .social-media{
+    justify-content: space-between;
+    font-size: 25pt;
+}
+
+.fa-facebook{
+    color: #466fc5;
+}
+
+.fa-twitter{
+    color: #2abaff;
+}
+
+.fa-instagram{
+    color: #ff6457;
+}
+
+.fa-youtube{
+    color: #ff0000;
+}
+
+.first-row, .second-row{
+    padding: inherit;
+}

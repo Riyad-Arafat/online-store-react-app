@@ -1,0 +1,53 @@
+.overflow-x-hidden{
+    overflow-x: hidden!important;
+}
+
+.side-nav{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 11111;
+    width: 250px;
+    min-height: 100%;
+    background-color:#333333;
+    color: #ffffff;
+}
+
+.side-nav li a{
+    display: block;
+    border-block-end: 1px solid #464646;
+    padding: 10px;
+    font-size: 15pt;
+    color: unset;
+    text-decoration: none;
+    
+}
+.side-nav .side-nav-item:hover{
+    background-color: rgba(255, 255, 255, 0.28);
+}
+
+.side-nav .drop-item a{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-nav .drop-item .drop-group{
+    display: none;
+}
+
+.side-nav .drop-item .drop-group{
+    background-color: #04040480;
+}
+
+
+.off-canavs{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000a6;
+    z-index: 1111;
+    transition: all .5s ease;
+}

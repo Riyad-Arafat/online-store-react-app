@@ -1,0 +1,33 @@
+#s-nav{
+    background-color: rgb(5, 45, 71);
+}
+
+#s-nav .nav-item{
+    border-right: 1px solid #ffffff;
+}
+
+#s-nav .nav-link{
+    color: #ffffff;
+}
+
+#b-nav{
+    padding: 15px 0px;
+}
+
+#catergory-nav .category-list .nav-item,
+#catergory-nav a{
+    color: #000000;
+}
+#catergory-nav .category-list .nav-item,
+#catergory-nav a:hover{
+    color: #303030;
+    text-decoration: none;
+}
+
+#header-search input{
+    width: 80%
+}
+
+#banners-nav img{
+    width: 100%;
+}
