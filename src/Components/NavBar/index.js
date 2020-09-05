@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from "react";
 import $ from 'jquery';
-import "../../libs-css/bootstrap.min.css";
 import "./style.css";
 import First from './first';
 import Category from './category';

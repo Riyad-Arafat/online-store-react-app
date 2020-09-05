@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import '../../libs-css/bootstrap.min.css'
 import './Footer.css';
 
 

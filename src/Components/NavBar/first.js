@@ -1,5 +1,4 @@
 import React , { Fragment} from "react"
-import "../../libs-css/bootstrap.min.css"
 import "./style.css"
 
 const FirstNav = () =>{

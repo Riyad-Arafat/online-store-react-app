@@ -1,5 +1,4 @@
 import React  from "react";
-import "../../libs-css/bootstrap.min.css";
 import "./style.css";
 
 const ThirdNav = () => {
