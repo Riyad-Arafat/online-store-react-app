@@ -1,6 +1,13 @@
 import React, {Component} from "react";
+import {connect} from 'react-redux';
 import $ from "jquery";
 import './style.css';
+
+
+// actions 
+
+import {add_to_cart, remove_from_cart} from './../../Actions';
+
 
 class ProductsSlider extends Component {
     sliceTitle = () => {
@@ -55,25 +62,44 @@ class ProductsSlider extends Component {
 
     state = {
         products :[
-            {id : 1, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "50%", price: 35, link : "#"},
-            {id : 2, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "100%", price: 35, link : "#"},
-            {id : 3, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "96%", price: 35, link : "#"},
-            {id : 4, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "75%", price: 35, link : "#"},
-            {id : 5, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "64%", price: 35, link : "#"},
-            {id : 6, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "48%", price: 35, link : "#"},
+            {id : 1, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "50%", price: 35, link : "#"},
+            {id : 2, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "100%", price: 35, link : "#"},
+            {id : 3, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "96%", price: 35, link : "#"},
+            {id : 4, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "75%", price: 35, link : "#"},
+            {id : 5, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "64%", price: 35, link : "#"},
+            {id : 6, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "48%", price: 35, link : "#"},
         ]
     }
     
-
     render() {
+        const  cart         = this.props.cart
         const {products}    = this.state;
         const product       =  products.map( item => {
+            
+            if(cart.some(i => i.id === item.id)){
+                var action = (
+                <button
+                    className="btn btn-block btn-danger"
+                    onClick={()=> this.props.remove_from_cart(item)}>
+                    Remove From Cart
+                    </button>
+                );
+            }else{
+                var action = (
+                    <button
+                     className="btn btn-block btn-primary"
+                     onClick={()=> this.props.add_to_cart(item)}>
+                        Add TO Cart
+                     </button>
+                );
+            }
+
             return(
                 <div key={item.id} className="card my-card">
                     <a href={item.link}>
                         <div className="my-card-img"><img src={item.img}/></div>
                         <div className="card-body">
-                            <div className="card-title">{item.tilte}</div>
+                            <div className="card-title">{item.title}</div>
                             <div className="item-rate">
                                 <i className="star-reating">
                                     <i className="rate" style={{width: item.rate}} ></i>
@@ -82,8 +108,9 @@ class ProductsSlider extends Component {
                             <div className="price"><span>{item.price} EGP</span></div>
                         </div>
                     </a>
+                    {action}
                 </div>
-            ) 
+            )
         });
         return(
             <div id="p-products">
@@ -104,4 +131,13 @@ class ProductsSlider extends Component {
     };
 }
 
-export default ProductsSlider;
+
+function mapSteteToProps(state){
+    return{
+        cart: state
+    }
+
+}
+
+
+export default connect(mapSteteToProps,{ add_to_cart, remove_from_cart})(ProductsSlider);

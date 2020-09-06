@@ -1,10 +1,14 @@
 import React, {Component, Fragment} from "react";
+
 import $ from 'jquery';
 import "./style.css";
 import First from './first';
 import Category from './category';
+import Cart from "./CartIcon";
 
 class NavBar extends Component {
+    
+    
     handleSideBar() {
         const off   = $(".off-canavs");
         const side  = $("#root");
@@ -13,8 +17,8 @@ class NavBar extends Component {
         $('body').toggleClass("overflow-x-hidden");
         $('html,body').scrollTop(0);
     }
-
     render(){
+        
         return(
             <Fragment>
                 <div id="header" className="fixed-top">
@@ -35,9 +39,7 @@ class NavBar extends Component {
                                         <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
                                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                     </form>
-                                    <div className="d-lg-flex justify-content-center">
-                                        <i className="fas fa-cart-arrow-down"></i>
-                                    </div>
+                                    <Cart />
                                 </div>
                             
                             </nav>
@@ -53,4 +55,6 @@ class NavBar extends Component {
         }
 };
 
-export default NavBar;
+
+
+export default (NavBar);

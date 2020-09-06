@@ -13,7 +13,11 @@ code {
     monospace;
 }
 
-a {
+.btn:focus {
+  box-shadow: unset;
+}
+
+a{
   color: unset;
 }
 
