@@ -7,7 +7,7 @@ class ProductsSlider extends Component {
         var $title = $(".card-title");
         for(let z = 0; z < $title.length; z++){
             var y = $title[z].innerHTML;
-            $title[z].innerHTML = y.slice(0,50) + " . . . .";
+            $title[z].innerHTML = y.slice(0,50) + ".....";
         }
     }
 
@@ -27,12 +27,12 @@ class ProductsSlider extends Component {
     }
 
     btnVisable = () => {
-        const slides    = $(".slide-container").find('.slides');
+        const slides    = $(".slide-container .slides");
         const $next     = $('.slide-container .next-btn');
         const $prev     = $('.slide-container .prev-btn');
     
         $prev.hide();
-        $(slides).on("scroll" , function(){
+        $(slides).on("scroll" , function(){            
             if($(this).scrollLeft() == 0 ){ 
                 $prev.hide();
                 $next.show();
@@ -46,6 +46,7 @@ class ProductsSlider extends Component {
         });
     
     };
+    
     componentDidMount(){
         this.btnVisable();
         this.sliceTitle();
