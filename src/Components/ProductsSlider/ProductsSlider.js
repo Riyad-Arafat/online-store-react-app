@@ -74,7 +74,7 @@ class ProductsSlider extends Component {
                         <div className="card-body">
                             <div className="card-title">{item.tilte}</div>
                             <div className="item-rate">
-                                <i class="star-reating">
+                                <i className="star-reating">
                                     <i className="rate" style={{width: item.rate}} ></i>
                                 </i>
                             </div>
