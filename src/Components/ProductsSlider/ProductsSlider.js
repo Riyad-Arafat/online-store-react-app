@@ -46,170 +46,51 @@ class ProductsSlider extends Component {
         });
     
     };
-
     componentDidMount(){
         this.btnVisable();
         this.sliceTitle();
     };
 
+
+    state = {
+        products :[
+            {id : 1, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "50%", price: 35, link : "#"},
+            {id : 2, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "100%", price: 35, link : "#"},
+            {id : 3, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "96%", price: 35, link : "#"},
+            {id : 4, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "75%", price: 35, link : "#"},
+            {id : 5, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "64%", price: 35, link : "#"},
+            {id : 6, tilte : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "48%", price: 35, link : "#"},
+        ]
+    }
     
+
     render() {
+        const {products}    = this.state;
+        const product       =  products.map( item => {
+            return(
+                <div key={item.id} className="card my-card">
+                    <a href={item.link}>
+                        <div className="my-card-img"><img src={item.img}/></div>
+                        <div className="card-body">
+                            <div className="card-title">{item.tilte}</div>
+                            <div className="item-rate">
+                                <i class="star-reating">
+                                    <i className="rate" style={{width: item.rate}} ></i>
+                                </i>
+                            </div>
+                            <div className="price"><span>{item.price} EGP</span></div>
+                        </div>
+                    </a>
+                </div>
+            ) 
+        });
         return(
             <div id="p-products">
                 <div className="my-container container-fluid">
                     <div className="section-title">popular products</div>
                     <div className="slide-container align-items-center">
                         <div className="slides">
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="card my-card">
-                                <a href="#">
-                                    <div className="my-card-img"><img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG"/></div>
-                                    <div className="card-body">
-                                        <div className="card-title">Labtop Dell Insprion 5583dfsdl fsdjfso gjrojge porjgpoerjgiorjgoirejhiojwgjerjperhjoprjh</div>
-                                        <div className="item-rate">^^^^^^</div>
-                                        <div className="price"><span>159 EGP</span></div>
-                                    </div>
-                                </a>
-                            </div>
+                            {product}
                         </div>
                         <div className="slide-arrow d-md-block d-none">
                             <div className="prev-btn btn" onClick={this.handelPrev}><i className="fas fa-chevron-left"></i></div>
