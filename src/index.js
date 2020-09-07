@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 
 import * as serviceWorker from './serviceWorker';
@@ -10,9 +10,9 @@ import './index.css';
 import App from './App';
 
 
-import cart from './Reducer'
+import {cart, products} from './Reducer'
 
-const store = createStore(cart);
+const store = createStore(combineReducers({cart, products}));
 
 
 ReactDOM.render(

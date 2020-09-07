@@ -11,6 +11,7 @@ import {add_to_cart, remove_from_cart} from './../../Actions';
 
 
 class ProductsSlider extends Component {
+    // slice Big Title of Item
     sliceTitle = () => {
         var $title = $(".card-title");
         for(let z = 0; z < $title.length; z++){
@@ -18,7 +19,7 @@ class ProductsSlider extends Component {
             $title[z].innerHTML = y.slice(0,50) + ".....";
         }
     }
-
+    // Handle slide to Next Items
     handelNext = (e) => {
         const $next     = $(e.target);
         const slides    = $($next).parents(".slide-container").find('.slides');
@@ -26,6 +27,7 @@ class ProductsSlider extends Component {
 
         $(slides).animate({scrollLeft : x + $(slides).width()}, 1000);
     }
+    // Handle slide to Previous Items
     handelPrev = (e) => {
         const $prev     = $(e.target);
         const slides    = $($prev).parents(".slide-container").find('.slides');
@@ -33,12 +35,11 @@ class ProductsSlider extends Component {
 
         $(slides).animate({scrollLeft : x - $(slides).width()}, 1000);
     }
-
+    // Handle Visibility of {next, prev} Button
     btnVisable = () => {
         const slides    = $(".slide-container .slides");
         const $next     = $('.slide-container .next-btn');
         const $prev     = $('.slide-container .prev-btn');
-    
         $prev.hide();
         $(slides).on("scroll" , function(){            
             if($(this).scrollLeft() === 0 ){ 
@@ -60,59 +61,51 @@ class ProductsSlider extends Component {
         this.sliceTitle();
     };
 
-
-    state = {
-        products :[
-            {id : 1, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "50%", price: 35, link : "#"},
-            {id : 2, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "100%", price: 35, link : "#"},
-            {id : 3, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "96%", price: 35, link : "#"},
-            {id : 4, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "75%", price: 35, link : "#"},
-            {id : 5, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "64%", price: 35, link : "#"},
-            {id : 6, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "48%", price: 35, link : "#"},
-        ]
-    }
-    
     render() {
-        const  cart         = this.props.cart
-        const {products}    = this.state;
-        const product       =  products.map( item => {
-            
-            if(cart.some(i => i.id === item.id)){
-                var action = (
-                <button
-                    className="btn btn-block btn-danger"
-                    onClick={()=> this.props.remove_from_cart(item)}>
-                    Remove From Cart
-                    </button>
-                );
-            }else{
-                action = (
+        const  {cart, products} = this.props;
+        // Return products if Exists
+        if (products.length){
+            var product   =  products.map( item => {
+                // Check if product-Item Exists in Cart 
+                if(cart.some(i => i.id === item.id)){
+                    var action = (
                     <button
-                     className="btn btn-block btn-primary"
-                     onClick={()=> this.props.add_to_cart(item)}>
-                        Add TO Cart
-                     </button>
-                );
-            }
-
-            return(
-                <div key={item.id} className="card my-card">
-                    <Link to={item.link}>
-                        <div className="my-card-img"><img src={item.img} alt={item.id}/></div>
-                        <div className="card-body">
-                            <div className="card-title">{item.title}</div>
-                            <div className="item-rate">
-                                <i className="star-reating">
-                                    <i className="rate" style={{width: item.rate}} ></i>
-                                </i>
+                        className="btn btn-block btn-danger"
+                        onClick={()=> this.props.remove_from_cart(item)}>
+                        Remove From Cart
+                        </button>
+                    );
+                }else{
+                    action = (
+                        <button
+                         className="btn btn-block btn-primary"
+                         onClick={()=> this.props.add_to_cart(item)}>
+                            Add TO Cart
+                         </button>
+                    );
+                }
+                
+                return(
+                    <div key={item.id} className="card my-card">
+                        <Link to= {`${item.id}`} >
+                            <div className="my-card-img"><img src={item.img} alt={item.id}/></div>
+                            <div className="card-body">
+                                <div className="card-title">{item.title}</div>
+                                <div className="item-rate">
+                                    <i className="star-reating">
+                                        <i className="rate" style={{width: item.rate}} ></i>
+                                    </i>
+                                </div>
+                                <div className="price"><span>{item.price} EGP</span></div>
                             </div>
-                            <div className="price"><span>{item.price} EGP</span></div>
-                        </div>
-                    </Link>
-                    {action}
-                </div>
-            )
-        });
+                        </Link>
+                        {action}
+                    </div>
+                )
+            });
+        }
+        
+        // The main Return of Compnents
         return(
             <div id="p-products">
                 <div className="my-container container-fluid">
@@ -135,9 +128,9 @@ class ProductsSlider extends Component {
 
 function mapSteteToProps(state){
     return{
-        cart: state
+        products : state.products,
+        cart: state.cart
     }
-
 }
 
 

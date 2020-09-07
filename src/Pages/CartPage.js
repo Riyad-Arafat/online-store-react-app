@@ -92,7 +92,7 @@ class Cart extends Component {
 
 function mapSteteToProps(state){
     return{
-        cart: state
+        cart: state.cart
     }
 
 }
