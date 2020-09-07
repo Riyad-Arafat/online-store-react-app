@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
+
+/// Main Components
 import NavBar from "./Components/NavBar/index";
 import SideNav from './Components/SideNav/SideNav';
 import Footer from './Components/Footer/Footer';
-import ImgSlider from './Components/ImagSlider/Slider';
-import TopCategory from './Components/TopCategory/TopCategory';
-import ProductsSlider from './Components/ProductsSlider/ProductsSlider';
-import Cart from './Components/Cart/Cart';
+
+/// All Pages of site
+import Home from './Pages/Home'
+import CartPage from './Pages/CartPage';
 
 
 class App extends Component {
@@ -20,10 +22,8 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <SideNav />
-          <Route exact path="/" component= {ImgSlider}/>
-          <Route exact path="/" component= {TopCategory} />
-          <Route exact path="/" component= {ProductsSlider} />
-          <Route eact path="/shopping_cart" component= {Cart} />
+          <Route exact path="/" component= {Home}/>
+          <Route eact path="/shopping_cart" component= {CartPage} />
 
           <Footer />
         </div>

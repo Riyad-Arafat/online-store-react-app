@@ -2,8 +2,8 @@ import React, {Component, Fragment} from "react";
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import "./style.css";
-import First from './first';
-import Category from './category';
+import First from './First';
+import Category from './Category';
 import Cart from "./CartIcon";
 
 class NavBar extends Component {
@@ -17,6 +17,22 @@ class NavBar extends Component {
         $('body').toggleClass("overflow-x-hidden");
         $('html,body').scrollTop(0);
     }
+
+    componentDidMount(){
+        /// Toggle Slide Category and First 
+        $(window).scroll(function(){
+            if($(document).scrollTop() >= 300){
+                $("#s-nav").slideUp();
+                $("#catergory-nav").slideUp();
+            }
+            else{
+                $("#s-nav").slideDown();
+                $("#catergory-nav").slideDown();
+            }
+        })
+
+    }
+
     render(){
         
         return(
