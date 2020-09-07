@@ -15,3 +15,10 @@ export const remove_from_cart = (item) => {
     }
     return action;
 }
+
+export const remove_all_cart = () => {
+    const action = {
+        type : REMOVE_ALL_CART,
+    }
+    return action;
+}

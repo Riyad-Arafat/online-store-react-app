@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import $ from "jquery";
 import './style.css';
 
@@ -40,7 +41,7 @@ class ProductsSlider extends Component {
     
         $prev.hide();
         $(slides).on("scroll" , function(){            
-            if($(this).scrollLeft() == 0 ){ 
+            if($(this).scrollLeft() === 0 ){ 
                 $prev.hide();
                 $next.show();
             }else if($(this).scrollLeft() > 0){
@@ -85,7 +86,7 @@ class ProductsSlider extends Component {
                     </button>
                 );
             }else{
-                var action = (
+                action = (
                     <button
                      className="btn btn-block btn-primary"
                      onClick={()=> this.props.add_to_cart(item)}>
@@ -96,8 +97,8 @@ class ProductsSlider extends Component {
 
             return(
                 <div key={item.id} className="card my-card">
-                    <a href={item.link}>
-                        <div className="my-card-img"><img src={item.img}/></div>
+                    <Link to={item.link}>
+                        <div className="my-card-img"><img src={item.img} alt={item.id}/></div>
                         <div className="card-body">
                             <div className="card-title">{item.title}</div>
                             <div className="item-rate">
@@ -107,7 +108,7 @@ class ProductsSlider extends Component {
                             </div>
                             <div className="price"><span>{item.price} EGP</span></div>
                         </div>
-                    </a>
+                    </Link>
                     {action}
                 </div>
             )

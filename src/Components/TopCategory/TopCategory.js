@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+
 import './style.css';
 
 
@@ -11,41 +13,41 @@ class TopCategory extends Component {
                 <div className="container-fluid my-container">
                     <div className="g-view">
                         <div className="g-title">
-                            <a href="#"><h3>Fashion</h3></a>
+                            <Link to="#"><h3>Fashion</h3></Link>
                         </div>
                         <div className="g-content rounded row row-cols-lg-2">
                             <div className="g-row">
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="g-row row row-cols-lg-2">
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 
                             </div>
@@ -54,41 +56,41 @@ class TopCategory extends Component {
                     <br/>
                     <div className="g-view rounded">
                         <div className="g-title">
-                            <a href="#"><h3>Accessories</h3></a>
+                            <Link to="#"><h3>Accessories</h3></Link>
                         </div>
                         <div className="g-content rounded row row-cols-lg-2">
                             <div className="g-row">
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="g-row row row-cols-lg-2">
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="g-item">
-                                    <a href="#" className="rounded shadow">
+                                    <Link to="#" className="rounded shadow">
                                         <img src="https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" alt="" />
                                         <h4>sadasf</h4>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

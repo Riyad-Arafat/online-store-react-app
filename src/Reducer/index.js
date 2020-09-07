@@ -20,6 +20,11 @@ const cart = (state = store , action) => {
         bake_cookie('cart', cart)
         return cart;
     }
+    else if(action.type === REMOVE_ALL_CART){
+        cart = []
+        bake_cookie('cart', cart)
+        return cart;
+    }
 
     else{
         bake_cookie('cart', state);

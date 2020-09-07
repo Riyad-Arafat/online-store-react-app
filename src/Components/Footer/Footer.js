@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {Link} from 'react-router-dom';
 import './Footer.css';
 
 
@@ -15,28 +16,28 @@ class Footer extends Component {
                                 <div className="col">
                                     <h5><b>POPULAR SEARCHES</b></h5>
                                     <ul className="list-unstyled">
-                                        <li><a href="#">safasf</a></li>
-                                        <li><a href="#">safasf</a></li>
-                                        <li><a href="#">safasf</a></li>
-                                        <li><a href="#">safasf</a></li>
-                                        <li><a href="#">safasf</a></li>
+                                        <li><Link to="#">safasf</Link></li>
+                                        <li><Link to="#">safasf</Link></li>
+                                        <li><Link to="#">safasf</Link></li>
+                                        <li><Link to="#">safasf</Link></li>
+                                        <li><Link to="#">safasf</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col">
                                     <div>
                                         <h5><b>MY ACCOUNT</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
                                         </ul>
                                     </div>
                                     <div>
                                         <h5><b>INTELLECTUAL PROPERTY</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
                                         </ul>
                                     </div>
                 
@@ -45,17 +46,17 @@ class Footer extends Component {
                                     <div>
                                         <h5><b>SELLING ON Store</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
                                         </ul>
                                     </div>
                                     <div>
                                         <h5><b>BUYING ON Store</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
-                                            <li><a href="#">safasf</a></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">safasf</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -63,10 +64,10 @@ class Footer extends Component {
                                     <div>
                                         <h5><b>Follow US</b></h5>
                                         <ul className="list-group list-group-horizontal list-unstyled social-media">
-                                            <li><a target="_blank" href="#"><i className="fa fa-facebook"></i></a></li>
-                                            <li><a target="_blank" href="#"><i className="fa fa-twitter"></i></a></li>
-                                            <li><a target="_blank" href="#"><i className="fa fa-instagram"></i></a></li>
-                                            <li><a target="_blank" href="#"><i className="fa fa-youtube"></i></a></li>
+                                            <li><Link target="_blank" to="#"><i className="fa fa-facebook"></i></Link></li>
+                                            <li><Link target="_blank" to="#"><i className="fa fa-twitter"></i></Link></li>
+                                            <li><Link target="_blank" to="#"><i className="fa fa-instagram"></i></Link></li>
+                                            <li><Link target="_blank" to="#"><i className="fa fa-youtube"></i></Link></li>
                                         </ul>
                                     </div>
                                 </div>

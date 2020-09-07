@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from "react";
-
+import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import "./style.css";
 import First from './first';
@@ -33,7 +33,7 @@ class NavBar extends Component {
                                         <button className="btn border-0 aside-btn" onClick={this.handleSideBar} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                             <span className="navbar-toggler-icon"></span>
                                         </button>
-                                        <a className="navbar-brand h1 mb-0" href="#">Store</a>
+                                        <Link className="navbar-brand h1 mb-0" to="/">Store</Link>
                                     </div>
                                     <form id="header-search" className="col form-inline d-none d-lg-flex justify-content-center">
                                         <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>

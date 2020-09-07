@@ -7,9 +7,10 @@ class Slider extends Component {
 
     centrSlides = () => {
         const $slides   = $("#slider .slides");
-        var $i          = $($slides).find('.slide-item').length;
+        var $i          = $($slides).find('.slide-item').length,
+            $x          = 0;
 
-        if( $i % 2 == 0){
+        if( $i % 2 === 0){
             $i = $i / 2;
             $i -= 1;
         }else{
@@ -17,10 +18,10 @@ class Slider extends Component {
             $i -= 1;
         }
 
-        if($("html").attr("dir") == "ltr"){
-            var $x = -100;
+        if($("html").attr("dir") === "ltr"){
+            $x = -100;
         }else{
-            var $x = 100;
+            $x = 100;
         }
         const slide = $($slides.find('.slide-item'))[$i];
         $(slide).addClass('show')
@@ -34,12 +35,12 @@ class Slider extends Component {
         const $slides       = $($(e.target).offsetParent()).find('.slides');
         const $now_img      = $slides.find(".show");
         var $next_img       = $now_img.next();
-        var $i              = $($next_img).index();
-
-        if($("html").attr("dir") == "ltr"){
-            var $x = -100;
+        var $i              = $($next_img).index(),
+            $x              = 0;
+        if($("html").attr("dir") === "ltr"){
+            $x = -100;
         }else{
-            var $x = 100;
+            $x = 100;
         }
 
         if($next_img.length){
@@ -59,12 +60,13 @@ class Slider extends Component {
         const $slides       = $($(e.target).offsetParent()).find('.slides');
         const $now_img      = $slides.find(".show");
         var $prev_img       = $now_img.prev(),
-        $i                  = $($prev_img).index();
+        $i                  = $($prev_img).index(),
+        $x                  = 0;
 
-        if($("html").attr("dir") == "ltr"){
-            var $x = -100;
+        if($("html").attr("dir") === "ltr"){
+            $x = -100;
         }else{
-            var $x = 100;
+            $x = 100;
         }
 
         if($prev_img.length){

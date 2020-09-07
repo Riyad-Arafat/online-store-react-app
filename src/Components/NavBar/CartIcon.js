@@ -1,13 +1,37 @@
 import React, {Component, Fragment} from "react";
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import styled from "styled-components";
 import $ from 'jquery';
 import "./style.css";
 
 class Cart extends Component{
+    // Toggle Slide {Drop} when click Cart icon
     handleDrop(){
-            $(".Drop").slideToggle();
+        $(".Drop")
+        .toggleClass("droped")
+        .slideToggle();
     }
+
+    componentDidMount(){
+        //Toggle slide {Drop} when click window
+        $(window).click(function(x){
+            const e     = x.target;
+            const ico   = $(".cart")[0];
+            const ii    = $(".view-cart")[0];
+            const drop = $('.Drop');
+            if(e !== ico && e !== ii && e !== $(".fa-cart-arrow-down")[0]){
+                if($(drop).hasClass("droped")){
+                    $(drop)
+                    .toggleClass("droped")
+                    .slideToggle();
+                }
+
+            }
+
+        })
+    }
+
     render(){
         ///// Return Number of Items That is in Cart
         const num = () => {
@@ -17,7 +41,7 @@ class Cart extends Component{
         }
 
         ///// Sryle Component
-        const Cart = styled.a`
+        const Cart = styled.div`
             position: relative;
             font-size: 15pt;
             ::before{
@@ -37,8 +61,13 @@ class Cart extends Component{
             width: 318px;
             left: -269px;
             top: 52px;
-            background-color: #ffff;
+            background-color: #ffff;    
             padding: 5px;
+        `;
+
+        const ItemContainer = styled.div`
+            overflow: auto;
+            max-height: 400px;
         `;
 
         const Item = styled.a`
@@ -54,15 +83,13 @@ class Cart extends Component{
         
         }
 
-        
-
         ///// Return Items That is in Cart
         const items = this.props.cart;
         var item  = items.map(item => {
             return(
                 <Item href={item.link} key={item.id}>
                     <div  className="overflow-hidden rounded p-2">
-                        <img style={img} className="img-fluid" src={item.img} />
+                        <img style={img} className="img-fluid" src={item.img} alt={item.id} />
                     </div>
                     <div className="title" >
                         <p className="lead">{item.title}</p>
@@ -70,14 +97,17 @@ class Cart extends Component{
                 </Item>
             )
         })
-        if(items.length == 0){
+        if(items.length > 0){
+            var view_btn =(
+                <Link to="/shopping_cart" className="view-cart btn btn-block btn-secondary">View Cart</Link>
+            )
+        }else{
             item   = (
                 <div className="d-flex justify-content-center">
                     <h3>Ther Is Nothing in Cart</h3>
                 </div>
-            )    
+            )
         }
-
         
         return(
             <Fragment>
@@ -86,7 +116,10 @@ class Cart extends Component{
                         <i className="fas fa-cart-arrow-down"></i>
                     </Cart>
                     <Drop className="Drop rounded shadow border-top" style={{display:"none"}}>
-                        {item}
+                        <ItemContainer>
+                            {item}
+                        </ItemContainer>
+                        {view_btn}
                     </Drop>
                 </div>
                 
