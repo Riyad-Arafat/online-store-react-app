@@ -9,3 +9,7 @@
 .App{
     padding-top: 170px;
 }
+
+.my-container{
+    max-width: 85%;
+}

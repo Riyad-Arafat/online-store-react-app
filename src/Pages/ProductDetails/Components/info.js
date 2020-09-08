@@ -3,16 +3,14 @@ import {connect} from 'react-redux';
 
 import './style.css';
 
-
 import ImgSlider from '../../../Components/ImagSlider/Slider'
-
 
 // actions 
 
 import {add_to_cart, remove_from_cart} from '../../../Actions';
 
 
-class Product extends Component{
+class ProductInfo extends Component{
     render()
     {
         var {products, cart, item} = this.props;
@@ -46,7 +44,7 @@ class Product extends Component{
         
 
         return(
-            <div className='container mt-4 p-4 bg-white'>
+            <div className='container-fluid mt-4 p-4 bg-white'>
                 <div className="row justify-content-center">
                     <div className="col-lg-4">
                         <div className="row row-cols-1 justify-content-center mb-5">
@@ -134,4 +132,4 @@ function mapSteteToProps(state){
     }
 }
 
-export default connect(mapSteteToProps,{ add_to_cart, remove_from_cart})(Product);;
+export default connect(mapSteteToProps,{ add_to_cart, remove_from_cart})(ProductInfo);;

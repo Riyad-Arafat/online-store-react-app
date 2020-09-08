@@ -28,3 +28,34 @@
     padding: 8px;
 }
   
+
+.rate-num{
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 24px;
+    border-radius: 50%;
+    font-size: 1.7857142857rem;
+    width: 5.7857142857rem;
+    height: 5.7857142857rem;
+    margin-bottom: .7142857143rem;
+    text-align: center;
+}
+
+p {
+    white-space: pre-wrap;
+} 
+
+.border-md-end{
+    border-inline-end: 1px solid gray
+}
+
+ /* Extra Small Devices, Phones */ 
+ @media only screen and (max-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .border-md-end{
+        border-inline-end: unset;
+    }
+}

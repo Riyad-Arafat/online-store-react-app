@@ -109,7 +109,7 @@ class ProductsSlider extends Component {
         return(
             <div id="p-products">
                 <div className="my-container container-fluid">
-                    <div className="section-title">popular products</div>
+                    <div className="section-title">{this.props.name}</div>
                     <div className="slide-container align-items-center">
                         <div className="slides">
                             {product}

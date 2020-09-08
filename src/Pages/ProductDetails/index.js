@@ -3,7 +3,9 @@ import {connect} from 'react-redux';
 
 
 // Components 
-import Product from './Components/Product';
+import Product from './Components/info';
+import Related from './../../Components/ProductsSlider';
+import Reviews from './Components/Reviews';
 
 
 class ProductPage extends Component{
@@ -14,6 +16,8 @@ class ProductPage extends Component{
 
             <Fragment>
                 <Product item={item} />
+                <Reviews />
+                <Related name="Relate Products" />
             </Fragment>
         )
     }
