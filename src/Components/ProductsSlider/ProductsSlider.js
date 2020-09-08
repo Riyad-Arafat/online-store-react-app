@@ -87,8 +87,8 @@ class ProductsSlider extends Component {
                 
                 return(
                     <div key={item.id} className="card my-card">
-                        <Link to= {`${item.id}`} >
-                            <div className="my-card-img"><img src={item.img} alt={item.id}/></div>
+                        <Link to={`product/${item.id}`} >
+                            <div className="my-card-img"><img src={item.img[0]} alt={item.id}/></div>
                             <div className="card-body">
                                 <div className="card-title">{item.title}</div>
                                 <div className="item-rate">

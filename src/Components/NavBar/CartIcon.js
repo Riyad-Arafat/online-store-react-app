@@ -89,7 +89,7 @@ class Cart extends Component{
             return(
                 <Item href={item.link} key={item.id}>
                     <div  className="overflow-hidden rounded p-2">
-                        <img style={img} className="img-fluid" src={item.img} alt={item.id} />
+                        <img style={img} className="img-fluid" src={item.img[0]} alt={item.id} />
                     </div>
                     <div className="title" >
                         <p className="lead">{item.title}</p>

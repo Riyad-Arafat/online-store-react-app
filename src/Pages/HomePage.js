@@ -15,7 +15,7 @@ class Home extends Component {
     {
         return(
             <Fragment>
-                <ImgSlider />
+                <ImgSlider images={['https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG',"https://cf4.s3.souqcdn.com/item/2015/07/21/80/77/59/2/item_L_8077592_8672323.jpg"]} />
                 <TopCategory />
                 <ProductsSlider />
             </Fragment>

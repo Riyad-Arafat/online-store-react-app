@@ -1,0 +1,30 @@
+.under-boreder{
+    border-block-end: 1px solid gray;
+}
+
+.was{
+    color: #afafaf;
+    text-decoration: line-through;
+}
+
+.color-container .colors{
+    display: flex;
+    flex-wrap: wrap;
+}
+.p-color{
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 100%;
+    margin: 2px;
+}
+
+
+.more-info {
+    width: 100%;
+}
+  
+.more-info td, th {
+    padding: 8px;
+}
+  

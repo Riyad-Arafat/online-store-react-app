@@ -136,7 +136,11 @@
 }
 
 .price {
-    font-size: 20pt;
+    font-size: 18pt;
     font-weight: 700;
-    color: #0054ec;
+    color: #006fcc;
+}
+
+.currency-text{
+    font-size: 12pt;
 }

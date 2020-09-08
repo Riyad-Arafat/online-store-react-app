@@ -37,7 +37,6 @@ export const cart = (state = cartItems , action) => {
             break;
         default:
             bake_cookie('cart', state);
-            state = [];
 
     }
     return state
@@ -46,14 +45,65 @@ export const cart = (state = cartItems , action) => {
 
 
 const ProductItems = [
-    {id : 1, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "50%", price: 35},
-    {id : 2, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "100%", price: 35},
-    {id : 3, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "96%", price: 35},
-    {id : 4, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "75%", price: 35},
-    {id : 5, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "64%", price: 35},
-    {id : 6, title : "Labtop Dell Insprion 2020 hp honer", img: "https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG" , rate: "48%", price: 35},
+    {
+        id : 1,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 15700,
+    },
+    {
+        id : 2,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 3035,
+    },
+    {
+        id : 3,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 7605,
+    },
+    {
+        id : 4,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 834,
+    },
+    {
+        id : 5,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 546,
+    },
+    {
+        id : 6,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 10000,
+    },
+    {
+        id : 7,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 5894,
+    },
+    {
+        id : 8,
+        title : "Labtop Dell Insprion 2020 hp honer",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        rate: "50%",
+        price: 25468,
+    },
 ];
-export const products = (state = ProductItems, action) => {
 
+
+export const products = (state = ProductItems, action) => {
     return state
 }

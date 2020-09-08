@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 // actions 
 
@@ -20,12 +21,14 @@ class Cart extends Component {
                 <div className="mt-4" key={item.id}>
                     <div className="row">
                         <div className="col-4 overflow-hidden p-0">
-                            <div className="rounded">
-                                <img className="img-fluid" src={item.img} alt={item.id} />
-                            </div> 
+                            <Link to={`product/${item.id}`} className="rounded">
+                                <img className="img-fluid" src={item.img[0]} alt={item.id} />
+                            </Link> 
                         </div>
                         <div className="col">
-                            <span>{item.title}</span>
+                            <Link to={`product/${item.id}`}>
+                                <span>{item.title}</span>
+                            </Link>
                             <div className="row">
                                 <div className="col">
                                     <div className="price">{item.price} EGP</div>
@@ -33,7 +36,6 @@ class Cart extends Component {
                             </div>
                             <button className="btn btn-block btn-danger mt-3" onClick={()=> this.props.remove_from_cart(item)}>Remove</button>
                         </div>
-                        
                     </div>  
                     
                 </div>
