@@ -21,9 +21,9 @@ class App extends Component {
           <NavBar />
           <SideNav />
           <Switch>
-          <Route exact path="/" component= {Home} />
-          <Route path="/shopping_cart" component= {CartPage} />
-          <Route path="/product/:item_id" component= {ProductDetails} neam="dsad" />
+            <Route exact path="/" component= {Home} />
+            <Route path="/shopping_cart" component= {CartPage} />
+            <Route path="/product/:item_id" component= {ProductDetails} neam="dsad" />
           </Switch>
           <Footer />
         </div>
