@@ -7,6 +7,7 @@
 
 .my-card{
     min-width: 243px;
+    max-width: 250px;
     border-radius: 0.25em;
 }
 

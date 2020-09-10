@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 
 // actions 
 
@@ -21,14 +20,14 @@ class Cart extends Component {
                 <div className="mt-4" key={item.id}>
                     <div className="row">
                         <div className="col-4 overflow-hidden p-0">
-                            <Link to={`product/${item.id}`} className="rounded">
+                            <a href={`/product/${item.id}`} className="rounded">
                                 <img className="img-fluid" src={item.img[0]} alt={item.id} />
-                            </Link> 
+                            </a> 
                         </div>
-                        <div className="col">
-                            <Link to={`product/${item.id}`}>
+                        <div className="col d-flex flex-column align-self-center">
+                            <a href={`/product/${item.id}`}>
                                 <span>{item.title}</span>
-                            </Link>
+                            </a>
                             <div className="row">
                                 <div className="col">
                                     <div className="price">{item.price} EGP</div>
@@ -57,7 +56,7 @@ class Cart extends Component {
             checckout = (
                 <div className="col-md-4">
                     <div className="rounded bg-white  sticky-top" style={{top:'172px'}}>
-                        <div className="shadow p-5">
+                        <div className="shadow p-2">
                             <h6>Total: <b className="price">{totle} EGP</b></h6>
                         </div>
                         <button className="btn btn-block btn-success mt-1">CHECKOUT</button>

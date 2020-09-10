@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import $ from "jquery";
 import './style.css';
 
@@ -87,7 +86,7 @@ class ProductsSlider extends Component {
                 
                 return(
                     <div key={item.id} className="card my-card">
-                        <Link to={`product/${item.id}`} >
+                        <a href={`/product/${item.id}`} >
                             <div className="my-card-img"><img src={item.img[0]} alt={item.id}/></div>
                             <div className="card-body">
                                 <div className="card-title">{item.title}</div>
@@ -98,7 +97,7 @@ class ProductsSlider extends Component {
                                 </div>
                                 <div className="price"><span>{item.price} EGP</span></div>
                             </div>
-                        </Link>
+                        </a>
                         {action}
                     </div>
                 )

@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from "react";
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import styled from "styled-components";
 import $ from 'jquery';
 import "./style.css";
@@ -87,7 +86,7 @@ class Cart extends Component{
         const items = this.props.cart;
         var item  = items.map(item => {
             return(
-                <Item href={item.link} key={item.id}>
+                <Item href={`/product/${item.id}`} key={item.id}>
                     <div  className="overflow-hidden rounded p-2">
                         <img style={img} className="img-fluid" src={item.img[0]} alt={item.id} />
                     </div>
@@ -99,7 +98,7 @@ class Cart extends Component{
         })
         if(items.length > 0){
             var view_btn =(
-                <Link to="/shopping_cart" className="view-cart btn btn-block btn-secondary">View Cart</Link>
+                <a href="/shopping_cart" className="view-cart btn btn-block btn-secondary">View Cart</a>
             )
         }else{
             item   = (

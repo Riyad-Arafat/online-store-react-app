@@ -1,5 +1,6 @@
 #root{
     transition: 0.4s all ease-in-out;
+    line-break: anywhere;
 }
 
 #root.open{

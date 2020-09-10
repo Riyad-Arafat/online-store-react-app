@@ -14,20 +14,60 @@ class ProductInfo extends Component{
     render()
     {
         var {products, cart, item} = this.props;
-        var product  = null,
+        var product = null,     
         id = parseInt(item);
-
+        /// Return the product
         products.map(item => {
             if(item.id === id){
                return product = item;
             }
             return null;
         })
-    
+        var price       = product.price,
+            was         = null,
+            features    = null,
+            left        = null;
+
+        if(product.sale > 0){
+            price = product.price * (product.sale/100);
+            was = (
+                <div>
+                    <span className="was">
+                        {product.price} EGP 
+                    </span>
+                    <span className=" text-dark bold font-weight-bold"> {product.sale}% off</span>
+                    
+                </div>
+            );
+        }
+        if(product.features && product.features.length > 0){
+            features = (
+                <div>
+                    <h6>Product Features:</h6>
+                    <ul>
+                        {
+                        product.features.map(feature =>{
+                            return(
+                                <li>{feature}</li>
+                            )
+                        })
+                        
+                        }
+                    </ul>
+                </div>
+            )
+        }
+        if(product.left <= 10){
+            left = (
+                <div className="text-danger font-weight-bold under-boreder">Only {product.left} left in stock!</div>
+            )
+        }
+
+        //// ADD and REMOVE from Cart 
         if(cart.some(i => i.id === product.id)){
             var action = (
             <button
-                className="btn btn-block btn-danger"
+                className="btn btn-danger"
                 onClick={()=> this.props.remove_from_cart(product)}>
                 Remove From Cart
                 </button>
@@ -35,47 +75,38 @@ class ProductInfo extends Component{
         }else{
             action = (
                 <button
-                 className="btn btn-block btn-primary"
+                 className="btn btn-primary"
                  onClick={()=> this.props.add_to_cart(product)}>
                     Add TO Cart
                 </button>
             );
         }
-        
-
         return(
             <div className='container-fluid mt-4 p-4 bg-white'>
                 <div className="row justify-content-center">
-                    <div className="col-lg-4">
+                    <div className="col-lg-6">
                         <div className="row row-cols-1 justify-content-center mb-5">
-                            <div>
-                                <h3>{product.title}</h3>
-                            </div>
+                            
                             <div>
                             <ImgSlider images={product.img} />
                             </div>
                         </div>
                     </div>
-                    <div className="col">
-                        <div className="row row-cols-1 row-cols-md-2">
+                    <div className="col d-flex flex-column align-self-center">
+                        <div className="row row-cols-1">
                             <div className="col">
+                                <div className="g-title">
+                                    <h3>{product.title}</h3>
+                                </div>
                                 <div className="price-container under-boreder">
                                     <div className="price">
-                                        <h3>{product.price} <span className="currency-text">EGP</span></h3>
+                                        <h3>{price} <span className="currency-text">EGP</span></h3>
                                     </div>
-                                    <div className="was">
-                                        <h6 className="">100 <span className="currency-text">EGP</span></h6>
-                                    </div>
+                                    {was}
                                 </div>
                                 <div className="color-container under-boreder">
                                     <h5>Color:</h5>
                                     <div className="colors">
-                                        <div className="p-color"></div>
-                                        <div className="p-color"></div>
-                                        <div className="p-color"></div>
-                                        <div className="p-color"></div>
-                                        <div className="p-color"></div>
-                                        <div className="p-color"></div>
                                         <div className="p-color"></div>
                                         <div className="p-color"></div>
                                     </div>
@@ -83,40 +114,21 @@ class ProductInfo extends Component{
                                 <div className="description-continer">
                                     <div>
                                         <h6>Description:</h6>
-                                        <p className="lead">mjwigjerjoerjhoeprhpoejrohejnkdngfrhgeirhjirejhejrihojeriohjeriohjioe</p>
+                                        <p className="lead">{product.description}</p>
                                     </div>
                                     <div>
                                         <h6>
-                                            Brand: <span className="lead">Dell</span>
+                                            Brand: <span className="lead">{product.brand}</span>
                                         </h6>
                                     </div>
-                                    <div>
-                                        <h6>Product Features:</h6>
-                                        <ul>
-                                            <li>sjagojropgje</li>
-                                            <li>sjagojropgje</li>
-                                            <li>sjagojropgje</li>
-                                            <li>sjagojropgje</li>
-                                            <li>sjagojropgje</li>
-                                        </ul>
-                                    </div>
-                                    
+                                    {features}
+                                </div>
+                                <div>
+                                    {action}
+                                    {left}
                                 </div>
                             </div>
-                            <div className="col">
-                                <div className="under-boreder">
-                                    {action }
-                                    <span className="text-danger font-weight-bold">Only 1 left in stock!</span>
-                                </div>
-                                <table  className="more-info">
-                                    <tbody>
-                                        <tr>
-                                            <td><b>saler</b></td>
-                                            <td>Maria Anders</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

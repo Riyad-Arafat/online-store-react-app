@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-
 import './style.css';
 
 
@@ -58,7 +56,7 @@ class Reviews extends Component{
                                                 </article>
                                             </div>
                                             <button className="btn btn-outline-primary">
-                                                <i class="far fa-thumbs-up"><span>VOTE</span></i>
+                                                <i className="far fa-thumbs-up"><span>VOTE</span></i>
                                             </button>
                                         </li>        
                                     </ul>
