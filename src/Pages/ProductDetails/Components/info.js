@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
+import $ from 'jquery';
 import './style.css';
 
 import ImgSlider from '../../../Components/ImagSlider/Slider'
@@ -48,7 +48,7 @@ class ProductInfo extends Component{
                         {
                         product.features.map(feature =>{
                             return(
-                                <li>{feature}</li>
+                                <li key={$(feature).index()}>{feature}</li>
                             )
                         })
                         
@@ -98,6 +98,11 @@ class ProductInfo extends Component{
                                 <div className="g-title">
                                     <h3>{product.title}</h3>
                                 </div>
+                                <div className="item-rate">
+                                    <i className="star-reating">
+                                        <i className="rate" style={{width: product.rate}} ></i>
+                                    </i>
+                                </div>   
                                 <div className="price-container under-boreder">
                                     <div className="price">
                                         <h3>{price} <span className="currency-text">EGP</span></h3>

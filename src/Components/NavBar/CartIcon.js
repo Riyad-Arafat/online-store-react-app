@@ -74,6 +74,7 @@ class Cart extends Component{
             grid-template-columns: 79px auto;
             overflow-wrap: anywhere;
             border-block-start: 1px solid #000000;
+            padding: 7px;
         `;
 
         const img = {
@@ -85,13 +86,20 @@ class Cart extends Component{
         ///// Return Items That is in Cart
         const items = this.props.cart;
         var item  = items.map(item => {
+            if(item.sale > 0){
+                var price = item.price * (item.sale/100);
+                
+            }else{
+                price = item.price;
+            }
             return(
                 <Item href={`/product/${item.id}`} key={item.id}>
                     <div  className="overflow-hidden rounded p-2">
                         <img style={img} className="img-fluid" src={item.img[0]} alt={item.id} />
                     </div>
                     <div className="title" >
-                        <p className="lead">{item.title}</p>
+                        <h5 className="m-0">{item.title}</h5>
+                        <span className="price">{price} <span className="currency-text">EGP</span></span>
                     </div>
                 </Item>
             )

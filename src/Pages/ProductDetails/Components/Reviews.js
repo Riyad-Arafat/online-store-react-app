@@ -1,12 +1,27 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import './style.css';
 
 
 
 class Reviews extends Component{
 
+
     render()
     {
+        var {products, product_id} = this.props,
+        product = null,     
+        id = parseInt(product_id);
+
+        /// Return the product
+        products.map(item => {
+            if(item.id === id){
+               return product = item;
+            }
+            return null;
+        })
+
+        var rate = (parseInt(product.rate)/100) * 5;
         return(
             <div className="coustmer-reviews mt-5 mb-5">
                 <div className="container my-container">
@@ -17,11 +32,11 @@ class Reviews extends Component{
                                 <div className="row mb-4">
                                     <div className="col-md-5 text-center border-md-end">
                                         <div className="rate-num">
-                                            <strong>5</strong>
+                                            <strong>{rate}</strong>
                                         </div>
                                         <div className="item-rate">
                                             <i className="star-reating">
-                                                <i className="rate" style={{width: "75%"}} ></i>
+                                                <i className="rate" style={{width: product.rate}} ></i>
                                             </i>
                                         </div>   
                                     </div>
@@ -68,8 +83,13 @@ class Reviews extends Component{
             </div>
         )
     }
-
-
 }
 
-export default Reviews;
+
+function mapSteteToProps(state){
+    return{
+        products : state.products,
+    }
+}
+
+export default connect(mapSteteToProps)(Reviews);

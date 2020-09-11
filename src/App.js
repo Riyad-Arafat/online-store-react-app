@@ -11,6 +11,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Pages/HomePage';
 import CartPage from './Pages/CartPage';
 import ProductDetails from './Pages/ProductDetails';
+import Section from './Pages/Section';
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/" component= {Home} />
             <Route path="/shopping_cart" component= {CartPage} />
             <Route path="/product/:item_id" component= {ProductDetails} neam="dsad" />
+            <Route path="/section" component= {Section} />
           </Switch>
           <Footer />
         </div>

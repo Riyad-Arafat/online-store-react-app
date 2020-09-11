@@ -16,7 +16,7 @@ class ProductPage extends Component{
 
             <Fragment>
                 <Product item={item} />
-                <Reviews />
+                <Reviews product_id={item} />
                 <Related name="Relate Products" />
             </Fragment>
         )
