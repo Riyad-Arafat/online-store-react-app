@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
 import './style.css';
 
 import ImgSlider from '../../../Components/ImagSlider/Slider'
@@ -48,7 +47,7 @@ class ProductInfo extends Component{
                         {
                         product.features.map(feature =>{
                             return(
-                                <li key={$(feature).index()}>{feature}</li>
+                                <li key={feature}>{feature}</li>
                             )
                         })
                         

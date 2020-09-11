@@ -8,7 +8,6 @@ import TopCategory from '../Components/TopCategory/TopCategory';
 import ProductsSlider from '../Components/ProductsSlider';
 
 
-
 class Home extends Component {
 
     render()

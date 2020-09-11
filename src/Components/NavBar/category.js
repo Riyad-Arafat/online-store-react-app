@@ -10,19 +10,19 @@ const ThirdNav = () => {
                 <Link to="#">All catergory</Link>
                 <ul id="catergory-list" className="nav">
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to={`/section/${0}`}>Free Shipping</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to={`/section/${0}`}>Free Shipping</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to={`/section/${0}`}>Free Shipping</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to={`/section/${0}`}>Free Shipping</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to={`/section/${0}`}>Free Shipping</Link>
                     </li>
                 </ul>
             </nav>

@@ -1,3 +1,5 @@
+import {createStore, combineReducers} from 'redux';
+
 import {bake_cookie, read_cookie} from 'sfcookies'
 
 import {ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL_CART} from '../Actions/AcrionType';
@@ -14,7 +16,7 @@ import "../Actions";
  */
 
 const cartItems = [];
-export const cart = (state = cartItems , action) => {
+const cart = (state = cartItems , action) => {
     let cart = null;
     state = read_cookie("cart");
     switch (action.type){
@@ -145,6 +147,25 @@ const ProductItems = [
 ];
 
 
-export const products = (state = ProductItems, action) => {
+const products = (state = ProductItems, action) => {
     return state
 }
+
+
+
+
+const section_api = [
+    {
+        id: 1,
+        name: "Electronics",
+        categories : ["TVs", "Camera", "PCs", "Laptops", "IT Accessoris",]
+    }
+];
+const sections = (state = section_api, action) => {
+    return state
+}
+
+
+const store = createStore(combineReducers({cart, products, sections}));
+
+export default store;

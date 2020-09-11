@@ -64,7 +64,7 @@ class Rows extends Component{
 
         return(
             <div className="container-fluid bg-white mt-4">
-                <div className="row row-cols-md-4 justify-content-center"> 
+                <div className="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-center"> 
                     {product}
                 </div>
             </div>
