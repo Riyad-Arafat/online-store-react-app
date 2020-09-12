@@ -119,10 +119,8 @@ class ProductsSlider extends Component {
                         <div className="slides">
                             {product}
                         </div>
-                        <div className="slide-arrow d-md-block d-none">
-                            <div className="prev-btn btn" onClick={this.handelPrev}><i className="fas fa-chevron-left"></i></div>
-                            <div className="next-btn btn" onClick={this.handelNext}><i className="fas fa-chevron-right"></i></div>
-                        </div>
+                        <div className="prev-btn btn" onClick={this.handelPrev}><i className="fas fa-chevron-left"></i></div>
+                        <div className="next-btn btn" onClick={this.handelNext}><i className="fas fa-chevron-right"></i></div>
                     </div>
                 </div>
             </div>

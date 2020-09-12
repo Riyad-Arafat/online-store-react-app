@@ -13,6 +13,7 @@
 
 .my-card-img{
     width: 100%;
+    height: 350px;
     position: relative;
     overflow: hidden;
 }
@@ -41,22 +42,25 @@
     display: flex;
 }
 
-.slide-arrow {
+.slide-container .next-btn,
+.slide-container .prev-btn{
     position: absolute;
-    z-index: 1;
-    display: block;
-    clear: both;
-    justify-content: space-between;
+    align-items: center;
     align-self: center;
-    width: 100%;
+    z-index: 22;
+    font-size: 45px;
+    padding: 13px 8px;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
 }
 
-.slide-arrow .next-btn{
-    float: right!important;
+.slide-container .next-btn{
+    right: -47px;
 }
 
-.slide-arrow .prev-btn{
-    float: left!important;
+.slide-container .prev-btn{
+    left: -41px;
 }
 
 
@@ -78,15 +82,6 @@
 #p-products .slides{
     -ms-overflow-style: hidden;
     scrollbar-width: none;
-}
-
-#p-products .prev-btn,
-#p-products .next-btn{
-    background-color: #282834ad;
-    color: #ffffff;
-    border-radius: 100%;
-    padding: 0px 20px;
-    font-size: 25pt;
 }
 
 #p-products .my-card{

@@ -9,30 +9,30 @@ const FirstNav = () =>{
             <nav className="d-lg-flex d-none m-auto justify-content-xl-between justify-content-end">
                 <ul id="pros-list" className="nav d-none d-xl-flex">
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                 </ul>
                 <ul id="contact-list" className="nav text-left text-xl-right">
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#">Free Shipping</Link>
+                        <Link className="nav-link" to="#">Linke Ex</Link>
                     </li>
                 </ul>
             </nav>

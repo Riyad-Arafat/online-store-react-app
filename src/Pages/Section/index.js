@@ -5,6 +5,10 @@ import Rows from "../../Components/ProductsSort/Rows";
 import NotFound from './../../Components/404';
 
 
+
+import phone from './../../images/phone.png';
+
+
 class Section extends Component{
     render(){
         const sectionName   = this.props.match.params.section;
@@ -20,9 +24,9 @@ class Section extends Component{
         if(section){
             const categories = section.categories.map(cat => {
                 return(
-                    <div key={cat} className="p-2">
+                    <div key={cat + Math.random()} className="p-2">
                         <a href="/" className="card text-center border-0 shadow ">
-                            <img className="img-fluid" src='https://riyadelberkawy.github.io/personal/files/front-end/Personal.PNG' alt="w"/>
+                            <img className="img-fluid" src={phone} alt="w"/>
                             <h4>{cat}</h4>
                         </a>
                     </div>

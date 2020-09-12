@@ -6,7 +6,8 @@ import {ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL_CART} from '../Actions/AcrionT
 import "../Actions";
 
 
-
+import clothe from './../images/clothe.png';
+import phone from './../images/phone.png';
 
 
 /*
@@ -45,7 +46,7 @@ const cart = (state = cartItems , action) => {
 }
 
 
-
+// All Products data
 const ProductItems = [
     {
         id : 1,
@@ -63,7 +64,7 @@ const ProductItems = [
         id : 2,
         title : "Prodect Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
-        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        img: [clothe,clothe],
         price: 15700,
         sale : 50,
         conadition : 'New',
@@ -75,7 +76,7 @@ const ProductItems = [
         id : 3,
         title : "Prodect Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
-        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        img: [phone,phone],
         price: 15700,
         sale : 16,
         conadition : 'New',
@@ -84,41 +85,40 @@ const ProductItems = [
         left : 1000,
     },
     {
-        id      : 4,
-        title   : "Prodect Name",
+        id : 4,
+        title : "Prodect Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
-        img     : ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
-        price   : 15700,
-        sale    : 50,
-        color   : ["red",],
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        price: 15700,
+        sale : 45,
         conadition : 'New',
         brand : "DELL",
-        features    : ["faster"],
-        rate: "55%",
+        rate: "100%",
+        left : 30,
     },
     {
         id : 5,
         title : "Prodect Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
-        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        img: [clothe,clothe],
         price: 15700,
-        sale : 75,
+        sale : 50,
         conadition : 'New',
         brand : "DELL",
-        rate: "89%",
-        left : 2,
+        rate: "60%",
+        left : 10,
     },
     {
         id : 6,
         title : "Prodect Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
-        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        img: [phone,phone],
         price: 15700,
-        sale : 10,
+        sale : 16,
         conadition : 'New',
-        brand : "Hp",
-        rate: "16%",
-        left : 16,
+        brand : "DELL",
+        rate: "75%",
+        left : 1000,
     },
     {
         id : 7,
@@ -126,39 +126,163 @@ const ProductItems = [
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
         img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
         price: 15700,
-        sale : 0,
+        sale : 45,
         conadition : 'New',
         brand : "DELL",
-        rate: "50%",
-        left : 146,
+        rate: "100%",
+        left : 30,
     },
     {
         id : 8,
         title : "Prodect Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
-        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        img: [clothe,clothe],
         price: 15700,
-        sale : 40,
+        sale : 50,
         conadition : 'New',
         brand : "DELL",
-        rate: "50%",
-        left : 6,
+        rate: "60%",
+        left : 10,
     },
+    {
+        id : 9,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [phone,phone],
+        price: 15700,
+        sale : 16,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "75%",
+        left : 1000,
+    },
+    {
+        id : 10,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        price: 15700,
+        sale : 45,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "100%",
+        left : 30,
+    },
+    {
+        id : 11,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [clothe,clothe],
+        price: 15700,
+        sale : 50,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "60%",
+        left : 10,
+    },
+    {
+        id : 12,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [phone,phone],
+        price: 15700,
+        sale : 16,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "75%",
+        left : 1000,
+    },
+    {
+        id : 13,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        price: 15700,
+        sale : 45,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "100%",
+        left : 30,
+    },
+    {
+        id : 14,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [clothe,clothe],
+        price: 15700,
+        sale : 50,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "60%",
+        left : 10,
+    },
+    {
+        id : 15,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [phone,phone],
+        price: 15700,
+        sale : 16,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "75%",
+        left : 1000,
+    },
+    {
+        id : 16,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: ["https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg","https://cf2.s3.souqcdn.com/item/2020/08/09/13/16/39/34/9/item_XL_131639349_8713816dedb92.jpg"],
+        price: 15700,
+        sale : 45,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "100%",
+        left : 30,
+    },
+    {
+        id : 17,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [clothe,clothe],
+        price: 15700,
+        sale : 50,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "60%",
+        left : 10,
+    },
+    {
+        id : 18,
+        title : "Prodect Name",
+        description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
+        img: [phone,phone],
+        price: 15700,
+        sale : 16,
+        conadition : 'New',
+        brand : "DELL",
+        rate: "75%",
+        left : 1000,
+    },
+    
 ];
-
-
 const products = (state = ProductItems, action) => {
     return state
 }
 
 
 
-
+// Section Data
 const section_api = [
     {
         id: 1,
         name: "Electronics",
-        categories : ["TVs", "Camera", "PCs", "Laptops", "IT Accessoris",]
+        categories : ["Example", "Example", "Example", "Example", "Example",]
+    },
+    {
+        id: 2,
+        name: "example",
+        categories : ["Example", "Example", "Example", "Example", "Example",]
     }
 ];
 const sections = (state = section_api, action) => {
