@@ -26,7 +26,7 @@ class NavBar extends Component {
     }
     toggleNavBar(){
         $(window).scroll(function(){
-            if($(document).scrollTop() >= 300){
+            if($(document).scrollTop() >= 100){
                 $("#s-nav").slideUp();
                 $("#catergory-nav").slideUp();
             }

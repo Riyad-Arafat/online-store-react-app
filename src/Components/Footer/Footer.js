@@ -16,28 +16,28 @@ class Footer extends Component {
                                 <div className="col">
                                     <h5><b>POPULAR SEARCHES</b></h5>
                                     <ul className="list-unstyled">
-                                        <li><Link to="#">safasf</Link></li>
-                                        <li><Link to="#">safasf</Link></li>
-                                        <li><Link to="#">safasf</Link></li>
-                                        <li><Link to="#">safasf</Link></li>
-                                        <li><Link to="#">safasf</Link></li>
+                                        <li><Link to="#">Link Example</Link></li>
+                                        <li><Link to="#">Link Example</Link></li>
+                                        <li><Link to="#">Link Example</Link></li>
+                                        <li><Link to="#">Link Example</Link></li>
+                                        <li><Link to="#">Link Example</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col">
                                     <div>
                                         <h5><b>MY ACCOUNT</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
                                         </ul>
                                     </div>
                                     <div>
                                         <h5><b>INTELLECTUAL PROPERTY</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
                                         </ul>
                                     </div>
                 
@@ -46,17 +46,17 @@ class Footer extends Component {
                                     <div>
                                         <h5><b>SELLING ON Store</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
                                         </ul>
                                     </div>
                                     <div>
                                         <h5><b>BUYING ON Store</b></h5>
                                         <ul className="list-unstyled">
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
-                                            <li><Link to="#">safasf</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
+                                            <li><Link to="#">Link Example</Link></li>
                                         </ul>
                                     </div>
                                 </div>

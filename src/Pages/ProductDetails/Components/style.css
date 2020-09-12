@@ -62,3 +62,34 @@ p {
         border-inline-end: unset;
     }
 }
+
+
+
+
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+    padding:0;   
+    -moz-user-select:none;
+    -webkit-user-select:none;
+  }
+  .rating-stars ul > li.star {
+    display:inline-block;
+    
+  }
+  
+  /* Idle State of the stars */
+  .rating-stars ul > li.star > i.far {
+    font-size:2.5em; 
+    color: #0000002b; 
+  }
+  
+  /* Hover state of the stars */
+  .rating-stars ul > li.star.hover > i.far {
+    color:#FFCC36;
+  }
+  
+  /* Selected state of the stars */
+  .rating-stars ul > li.star.selected > i.far {
+    color:#FF912C;
+  }

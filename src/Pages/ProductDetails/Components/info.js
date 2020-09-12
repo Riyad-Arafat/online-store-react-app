@@ -108,13 +108,6 @@ class ProductInfo extends Component{
                                     </div>
                                     {was}
                                 </div>
-                                <div className="color-container under-boreder">
-                                    <h5>Color:</h5>
-                                    <div className="colors">
-                                        <div className="p-color"></div>
-                                        <div className="p-color"></div>
-                                    </div>
-                                </div>
                                 <div className="description-continer">
                                     <div>
                                         <h6>Description:</h6>
