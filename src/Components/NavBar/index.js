@@ -2,13 +2,20 @@ import React, {Component, Fragment} from "react";
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import "./style.css";
+
+// components
 import First from './First';
 import Category from './Category';
 import Cart from "./CartIcon";
+import SearchBar from '../searchBar';
 
 class NavBar extends Component {
-    
-    
+    constructor(){
+        super();
+        this.handleSideBar();
+        this.toggleNavBar();
+        
+    }
     handleSideBar() {
         const off   = $(".off-canavs");
         const side  = $("#root");
@@ -17,9 +24,7 @@ class NavBar extends Component {
         $('body').toggleClass("overflow-x-hidden");
         $('html,body').scrollTop(0);
     }
-
-    componentDidMount(){
-        /// Toggle Slide Category and First 
+    toggleNavBar(){
         $(window).scroll(function(){
             if($(document).scrollTop() >= 300){
                 $("#s-nav").slideUp();
@@ -30,11 +35,12 @@ class NavBar extends Component {
                 $("#catergory-nav").slideDown();
             }
         })
-
+    }
+    search(){
+        window.location.pathname = this
     }
 
     render(){
-        
         return(
             <Fragment>
                 <div id="header" className="fixed-top">
@@ -51,10 +57,7 @@ class NavBar extends Component {
                                         </button>
                                         <Link className="navbar-brand h1 mb-0" to="/">Store</Link>
                                     </div>
-                                    <form id="header-search" className="col form-inline d-none d-lg-flex justify-content-center">
-                                        <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                    </form>
+                                    <SearchBar />
                                     <Cart />
                                 </div>
                             

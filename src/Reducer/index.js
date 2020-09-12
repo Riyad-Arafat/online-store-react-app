@@ -242,7 +242,7 @@ const ProductItems = [
     },
     {
         id : 17,
-        title : "Prodect Name",
+        title : "aaaaafa Name",
         description : "Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text Descriptive Text",
         img: [clothe,clothe],
         price: 15700,
