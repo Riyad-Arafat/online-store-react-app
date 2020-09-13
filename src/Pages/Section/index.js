@@ -45,7 +45,7 @@ class Section extends Component{
                         </div>
                     </div>
                 </div>
-                <Rows />
+                <Rows section="example"/>
             </div>
           )
         }else{

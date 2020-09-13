@@ -14,7 +14,15 @@ class Rows extends Component{
         const  {cart, products} = this.props;
         // Return products if Exists
         if (products.length){
-            var product   =  products.map( item => {
+   
+            var product   =  products.filter(item =>{
+                if(this.props.query){
+                    return item.title.toLowerCase().indexOf(this.props.query.toLowerCase()) !== -1;
+                }else{
+                    return item.section === this.props.section;
+                }
+            });
+            product = product.map( item => {
                 // Check if product-Item Exists in Cart 
                 if(cart.some(i => i.id === item.id)){
                     var action = (
