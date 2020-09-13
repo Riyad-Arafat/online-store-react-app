@@ -22,13 +22,11 @@ class ProductInfo extends Component{
             }
             return null;
         })
-        var price       = product.price,
-            was         = null,
+        var was         = null,
             features    = null,
             left        = null;
 
         if(product.sale > 0){
-            price = product.price * (product.sale/100);
             was = (
                 <div>
                     <span className="was">
@@ -104,7 +102,7 @@ class ProductInfo extends Component{
                                 </div>   
                                 <div className="price-container under-boreder">
                                     <div className="price">
-                                        <h3>{price} <span className="currency-text">EGP</span></h3>
+                                        <h3>{product.price} <span className="currency-text">EGP</span></h3>
                                     </div>
                                     {was}
                                 </div>

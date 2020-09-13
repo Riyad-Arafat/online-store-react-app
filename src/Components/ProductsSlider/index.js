@@ -83,12 +83,7 @@ class ProductsSlider extends Component {
                          </button>
                     );
                 }
-                if(item.sale > 0){
-                    var price = item.price * (item.sale/100);
-                    
-                }else{
-                    price = item.price;
-                }
+                
                 
                 return(
                     <div key={item.id} className="card my-card">
@@ -101,7 +96,7 @@ class ProductsSlider extends Component {
                                         <i className="rate" style={{width: item.rate}} ></i>
                                     </i>
                                 </div>
-                                <div className="price"><span>{price} EGP</span></div>
+                                <div className="price"><span>{item.price} EGP</span></div>
                             </div>
                         </a>
                         {action}

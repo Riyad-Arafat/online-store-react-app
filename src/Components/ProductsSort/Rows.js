@@ -15,13 +15,15 @@ class Rows extends Component{
         // Return products if Exists
         if (products.length){
    
-            var product   =  products.filter(item =>{
-                if(this.props.query){
-                    return item.title.toLowerCase().indexOf(this.props.query.toLowerCase()) !== -1;
-                }else{
-                    return item.section === this.props.section;
+            if(this.props.query){
+                var product   =  products.filter(item => item.title.toLowerCase().indexOf(this.props.query.toLowerCase()) !== -1)
+                
+                if(this.props.max){
+                    product = product.filter( item => item.price <= parseInt(this.props.max))
                 }
-            });
+            }else{
+                product   =  products.filter(item => item.section === this.props.section)
+            }
             product = product.map( item => {
                 // Check if product-Item Exists in Cart 
                 if(cart.some(i => i.id === item.id)){
@@ -41,12 +43,6 @@ class Rows extends Component{
                          </button>
                     );
                 }
-                if(item.sale > 0){
-                    var price = item.price * (item.sale/100);
-                    
-                }else{
-                    price = item.price;
-                }
                 
                 return(
                     <div key={item.id} className="card">
@@ -59,7 +55,7 @@ class Rows extends Component{
                                         <i className="rate" style={{width: item.rate}} ></i>
                                     </i>
                                 </div>
-                                <div className="price"><span>{price} EGP</span></div>
+                                <div className="price"><span>{item.price} EGP</span></div>
                             </div>
                         </a>
                         {action}

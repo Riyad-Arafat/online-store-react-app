@@ -27,7 +27,8 @@ class App extends Component {
             <Route path="/shopping_cart" component= {CartPage} />
             <Route path="/product/:item_id" component= {ProductDetails} neam="dsad" />
             <Route path="/section/:section" component= {Section} />
-            <Route path="/search/q=:q" component= {SearchPage} />
+            <Route exact path="/search/q=:q" component= {SearchPage} />
+            <Route path="/search/q=:q/price/min=:min/max=:max" component= {SearchPage} />
           </Switch>
           <Footer />
         </div>
