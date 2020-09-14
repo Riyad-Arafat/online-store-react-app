@@ -11,7 +11,6 @@ import SearchBar from '../searchBar';
 class NavBar extends Component {
     constructor(){
         super();
-        this.handleSideBar();
         this.toggleNavBar();
         
     }
