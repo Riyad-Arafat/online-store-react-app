@@ -37,6 +37,7 @@ class SearchPage extends Component{
 
     render()
     {
+        console.log(this.props)
         return(
             <section>
                 <div className="container-fluid">

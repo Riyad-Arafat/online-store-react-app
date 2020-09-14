@@ -14,12 +14,13 @@ class Rows extends Component{
         const  {cart, products} = this.props;
         // Return products if Exists
         if (products.length){
-   
             if(this.props.query){
                 var product   =  products.filter(item => item.title.toLowerCase().indexOf(this.props.query.toLowerCase()) !== -1)
-                
                 if(this.props.max){
                     product = product.filter( item => item.price <= parseInt(this.props.max) && item.price >= parseInt(this.props.min))
+                    if(product.length < 1){
+                        var x = (<h6>with this min and max price</h6>)
+                    }
                 }
             }else{
                 product   =  products.filter(item => item.section === this.props.section)
@@ -65,14 +66,25 @@ class Rows extends Component{
         }
         
         // The main Return of Compnents
-
-        return(
-            <div>
-                <div className="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-center"> 
-                    {product}
+        if (product.length){
+            return(
+                <div>
+                    <div className="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-center"> 
+                        {product}
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }else{
+            return(
+                <div className="container">
+                    <div className="text-center bg-white shadow p-5 mb-5">
+                        <h3>Sorry there isn't result for <span className="text-danger">{this.props.query}</span></h3>
+                        {x}
+                    </div>
+                </div>
+            )
+        }
+        
     }
 }
 
