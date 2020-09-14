@@ -15,14 +15,7 @@ class Cart extends Component {
             remove_all  =   null;
         const items     = this.props.cart;
         var   item      = items.map(item => {
-            if(item.sale > 0){
-                var price = item.price * (item.sale/100);
-                
-            }else{
-                price = item.price;
-            }
-
-            totle += price
+            totle += item.price;
             return(
                 <div className="mt-4" key={item.id}>
                     <div className="row">
@@ -37,7 +30,7 @@ class Cart extends Component {
                             </a>
                             <div className="row">
                                 <div className="col">
-                                    <div className="price">{price} EGP</div>
+                                    <div className="price">{item.price} EGP</div>
                                 </div>
                             </div>
                             <button className="btn btn-block btn-danger mt-3" onClick={()=> this.props.remove_from_cart(item)}>Remove</button>

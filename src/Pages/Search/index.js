@@ -39,24 +39,33 @@ class SearchPage extends Component{
     {
         return(
             <section>
-                <div className="container">
-                     <div className="filter w-100 shadow p-md-5 p-3 row row-cols-1 flex-column m-0">
-                         <div className="mb-3">
-                            <h3>Price:</h3>
-                            <div className="range-price col border-md-end">
-                                <input className="min" name="range_1" type="range" min="1" max={this.state.maxVal} value={this.state.min} onChange={this.min} />
-                                <input className="max" name="range_1" type="range" min="1" max={this.state.maxVal} value={this.state.max} onChange={this.max} />
-                                <div className="d-flex justify-content-between text-center">
-                                    <div className="range-min price">{this.state.min} EGP</div>
-                                    <div className="range-max price">{this.state.max} EGP</div>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="filter col-lg-3 d-inline-block w-100 mb-3">
+                            <div className="row row-cols-1 flex-column m-0 bg-white shadow sticky-top" style={{top: '170px'}}>
+                                <div className="p-2 mb-3 d-inline-block">
+                                    <h3>Price:</h3>
+                                    <div className="range-price col">
+                                        <input className="min" name="range_1" type="range" min="1" max={this.state.maxVal} value={this.state.min} onChange={this.min} />
+                                        <input className="max" name="range_1" type="range" min="1" max={this.state.maxVal} value={this.state.max} onChange={this.max} />
+                                        <div className="d-flex justify-content-between text-center">
+                                            <div className="range-min price">{this.state.min} EGP</div>
+                                            <div className="range-max price">{this.state.max} EGP</div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <button className="btn btn-success" onClick={this.onsubmit}>Submit</button>  
                             </div>
-                         </div>
-                        <button className="btn btn-success align-self-end col-md-3" onClick={this.onsubmit}>Submit</button>
-                        
-                     </div>
+                        </div>
+                        <div className="col">
+                            <Rows query={this.props.match.params.q} max={this.props.match.params.max} min={this.props.match.params.min}/>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
-                <Rows query={this.props.match.params.q} max={this.props.match.params.max} min={this.props.match.params.min}/>
+                
+                
             </section>
             
         )

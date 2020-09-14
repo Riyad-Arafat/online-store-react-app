@@ -19,7 +19,7 @@ class Rows extends Component{
                 var product   =  products.filter(item => item.title.toLowerCase().indexOf(this.props.query.toLowerCase()) !== -1)
                 
                 if(this.props.max){
-                    product = product.filter( item => item.price <= parseInt(this.props.max))
+                    product = product.filter( item => item.price <= parseInt(this.props.max) && item.price >= parseInt(this.props.min))
                 }
             }else{
                 product   =  products.filter(item => item.section === this.props.section)
@@ -67,7 +67,7 @@ class Rows extends Component{
         // The main Return of Compnents
 
         return(
-            <div className="container-fluid bg-white mt-4">
+            <div>
                 <div className="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-center"> 
                     {product}
                 </div>

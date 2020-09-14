@@ -45,7 +45,10 @@ class Section extends Component{
                         </div>
                     </div>
                 </div>
-                <Rows section="example"/>
+                <div className="container mt-2">
+                    <Rows section="example"/>
+                </div>
+                
             </div>
           )
         }else{

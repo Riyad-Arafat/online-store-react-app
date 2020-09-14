@@ -1,9 +1,9 @@
-#root{
+.App{
     transition: 0.4s all ease-in-out;
     overflow-wrap: break-word;
 }
 
-#root.open{
+.App.open{
     transform: translateX(250px);
 }
 

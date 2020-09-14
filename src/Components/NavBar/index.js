@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from "react";
-import {Link} from 'react-router-dom';
 import $ from 'jquery';
 import "./style.css";
 
@@ -18,7 +17,7 @@ class NavBar extends Component {
     }
     handleSideBar() {
         const off   = $(".off-canavs");
-        const side  = $("#root");
+        const side  = $(".App");
         $(off).fadeToggle();
         $(side).toggleClass("open");
         $('body').toggleClass("overflow-x-hidden");
@@ -36,9 +35,6 @@ class NavBar extends Component {
             }
         })
     }
-    search(){
-        window.location.pathname = this
-    }
 
     render(){
         return(
@@ -55,7 +51,7 @@ class NavBar extends Component {
                                         <button className="btn border-0 aside-btn" onClick={this.handleSideBar} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                             <span className="navbar-toggler-icon"></span>
                                         </button>
-                                        <Link className="navbar-brand h1 mb-0" to="/">Store</Link>
+                                        <a className="navbar-brand h1 mb-0" href="/">Store</a>
                                     </div>
                                     <SearchBar />
                                     <Cart />
