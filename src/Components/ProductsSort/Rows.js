@@ -46,7 +46,7 @@ class Rows extends Component{
                 }
                 
                 return(
-                    <div key={item.id} className="card">
+                    <div key={item.id} className="card w-100 border-info">
                         <a href={`/product/${item.id}`} >
                             <div className="my-card-img"><img src={item.img[0]} alt={item.id}/></div>
                             <div className="card-body">

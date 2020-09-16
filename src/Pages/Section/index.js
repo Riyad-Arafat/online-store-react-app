@@ -24,7 +24,7 @@ class Section extends Component{
         if(section){
             const categories = section.categories.map(cat => {
                 return(
-                    <div key={cat + Math.random()} className="p-2">
+                    <div key={cat + Math.random()} className="p-2 w-100">
                         <a href="/" className="card text-center border-0 shadow ">
                             <img className="img-fluid" src={phone} alt="w"/>
                             <h4>{cat}</h4>
@@ -40,12 +40,12 @@ class Section extends Component{
                 <div className="categories bg-white text-center pb-5">
                     <h3 className="g-title">SHOP BY CATEGORY</h3>
                     <div className="container">
-                        <div className="row row-cols-lg-3 row-cols-md-2 row-cols-md-2">
+                        <div className="row row-cols-lg-3 row-cols-md-2 row-cols-md-2 justify-content-center">
                             {categories}
                         </div>
                     </div>
                 </div>
-                <div className="container mt-2">
+                <div className="container-fluid container-xl mt-2">
                     <Rows section="example"/>
                 </div>
                 

@@ -29,6 +29,7 @@
     margin: auto;
 }
 .g-row{
+    width: 100%;
     margin: auto;
     padding: 10px;
     text-align: center;
@@ -36,6 +37,7 @@
 }
 
 .g-item{
+    width: 100%;
     padding: 5px;
 }
 
