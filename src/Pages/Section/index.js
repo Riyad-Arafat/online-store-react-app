@@ -4,8 +4,6 @@ import Rows from "../../Components/ProductsSort/Rows";
 
 import NotFound from './../../Components/404';
 
-
-
 import phone from './../../images/phone.png';
 
 
