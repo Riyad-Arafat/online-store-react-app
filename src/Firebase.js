@@ -1,8 +1,9 @@
-import firebase from 'firebase/app';
+import * as firebase from "firebase";
 import 'firebase/firestore';
 
+// Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyALNZWgtjthmrA0Twl1XMocdu9b4wDX0dE",
     authDomain: "store-react-app-29d40.firebaseapp.com",
     databaseURL: "https://store-react-app-29d40.firebaseio.com",
@@ -11,9 +12,11 @@ const firebaseConfig = {
     messagingSenderId: "71380867060",
     appId: "1:71380867060:web:a75fbbe3e7a02954fe8ba1",
     measurementId: "G-KXZN0D7MXF"
-};
-
+    };
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
 
 export default firebase;
      

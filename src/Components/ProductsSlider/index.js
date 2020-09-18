@@ -96,7 +96,7 @@ class ProductsSlider extends Component {
                                         <i className="rate" style={{width: item.rate}} ></i>
                                     </i>
                                 </div>
-                                <div className="price"><span>{item.price} EGP</span></div>
+                                <div className="price"><span>{item.fPrice} EGP</span></div>
                             </div>
                         </a>
                         {action}

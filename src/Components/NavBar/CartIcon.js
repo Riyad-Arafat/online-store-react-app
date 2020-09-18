@@ -93,7 +93,7 @@ class Cart extends Component{
                     </div>
                     <div className="title" >
                         <h5 className="m-0">{item.title}</h5>
-                        <span className="price">{item.price } <span className="currency-text">EGP</span></span>
+                        <span className="price">{item.fPrice } <span className="currency-text">EGP</span></span>
                     </div>
                 </Item>
             )

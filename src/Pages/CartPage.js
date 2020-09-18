@@ -30,7 +30,7 @@ class Cart extends Component {
                             </a>
                             <div className="row">
                                 <div className="col">
-                                    <div className="price">{item.price} EGP</div>
+                                    <div className="price">{item.fPrice} EGP</div>
                                 </div>
                             </div>
                             <button className="btn btn-block btn-danger mt-3" onClick={()=> this.props.remove_from_cart(item)}>Remove</button>

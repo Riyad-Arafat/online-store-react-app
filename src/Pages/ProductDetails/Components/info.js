@@ -102,7 +102,7 @@ class ProductInfo extends Component{
                                 </div>   
                                 <div className="price-container under-boreder">
                                     <div className="price">
-                                        <h3>{product.price} <span className="currency-text">EGP</span></h3>
+                                        <h3>{product.fPrice} <span className="currency-text">EGP</span></h3>
                                     </div>
                                     {was}
                                 </div>
