@@ -17,7 +17,11 @@ class Rows extends Component{
             if(this.props.query){
                 var product   =  products.filter(item => item.title.toLowerCase().indexOf(this.props.query.toLowerCase()) !== -1)
                 if(this.props.max){
-                    product = product.filter( item => item.price <= parseInt(this.props.max) && item.price >= parseInt(this.props.min))
+                    console.log()
+                    product.map(item => {
+                        return console.log(item.fPrice)
+                    })
+                    product = product.filter( item => item.fPrice >= parseInt(this.props.min) && item.fPrice <= parseInt(this.props.max))
                     if(product.length < 1){
                         var x = (<h6>with this min and max price</h6>)
                     }

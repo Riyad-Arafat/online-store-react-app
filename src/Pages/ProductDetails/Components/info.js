@@ -9,7 +9,8 @@ import ImgSlider from '../../../Components/ImagSlider/Slider'
 import {add_to_cart, remove_from_cart} from '../../../Actions';
 
 
-class ProductInfo extends Component{
+
+class ProductInfo extends Component{   
     render()
     {
         var {products, cart, item} = this.props;

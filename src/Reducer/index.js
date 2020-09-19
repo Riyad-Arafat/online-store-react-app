@@ -293,14 +293,11 @@ const ProductItems = [
     
 ];
 
-// Handle Sales
 for(let i = 0; i < ProductItems.length; i++){
     if(ProductItems[i].sale > 0){
-        ProductItems[i].fPrice = ProductItems[i].price * (ProductItems[i].sale/100);
+        ProductItems[i].fPrice = ProductItems[i].sale / 100 * ProductItems[i].price;
     }
-
 }
-
 const products = (state = ProductItems, action) => {
     return state
 }
