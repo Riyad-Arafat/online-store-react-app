@@ -9,7 +9,7 @@ class hrefpCategory extends Component {
 
     render(){
         return(
-            <div id="hrefp-category-section">
+            <div className="top-category-section">
                 <div className="container-fluid my-container">
                     <div className="g-view">
                         <div className="g-title">

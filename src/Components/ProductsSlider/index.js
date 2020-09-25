@@ -96,7 +96,7 @@ class ProductsSlider extends Component {
                                         <i className="rate" style={{width: item.rate}} ></i>
                                     </i>
                                 </div>
-                                <div className="price"><span>{item.fPrice} EGP</span></div>
+                                <div className="price"><span>{item.fPrice}</span><span className="currency-text">EGP</span></div>
                             </div>
                         </a>
                         {action}
@@ -107,7 +107,7 @@ class ProductsSlider extends Component {
         
         // The main Return of Compnents
         return(
-            <div id="p-products">
+            <div className="p-products">
                 <div className="my-container container-fluid">
                     <div className="section-title">{this.props.name}</div>
                     <div className="slide-container align-items-center">

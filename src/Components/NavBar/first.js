@@ -5,7 +5,7 @@ import "./style.css"
 const FirstNav = () =>{
 
     return(
-        <div id="s-nav">
+        <div className="s-nav">
             <nav className="d-lg-flex d-none m-auto justify-content-xl-between justify-content-end">
                 <ul id="pros-list" className="nav d-none d-xl-flex">
                     <li className="nav-item">

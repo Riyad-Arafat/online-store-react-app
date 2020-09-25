@@ -25,12 +25,12 @@ class NavBar extends Component {
     toggleNavBar(){
         $(window).scroll(function(){
             if($(document).scrollTop() >= 100){
-                $("#s-nav").slideUp();
-                $("#catergory-nav").slideUp();
+                $(".s-nav").slideUp();
+                $(".catergory-nav").slideUp();
             }
             else{
-                $("#s-nav").slideDown();
-                $("#catergory-nav").slideDown();
+                $(".s-nav").slideDown();
+                $(".catergory-nav").slideDown();
             }
         })
     }
@@ -43,7 +43,7 @@ class NavBar extends Component {
                         {/** First NaveBar as A Small one */}
                         <First />
                         {/** Second NaveBar that containes the search  Form */}
-                        <div id="b-nav" className="border bg-white">
+                        <div className="b-nav border bg-white">
                             <nav className="container navbar-expand-lg navbar-light">
                                 <div className="row justify-content-between align-items-center">
                                     <div id="brand-logo" className="d-flex justify-content-center">

@@ -64,7 +64,7 @@ class SearchBar extends Component {
 
         return(
             <Fragment>
-                <form id="header-search" className="col form-inline d-none d-lg-flex justify-content-center position-relative" onSubmit={this.onsubmit}>
+                <form className="search col form-inline d-none d-lg-flex justify-content-center position-relative" onSubmit={this.onsubmit}>
                     <input className="form-control" type="search" placeholder="Search" aria-label="Search" value={this.state.value} onChange={this.search}/>
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     {result}

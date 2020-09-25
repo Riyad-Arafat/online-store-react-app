@@ -6,7 +6,7 @@ import './style.css';
 class Slider extends Component {
 
     centrSlides = () => {
-        const $slides   = $("#slider .slides");
+        const $slides   = $(".slider-container .slides");
         var $i          = $($slides).find('.slide-item').length,
             $x          = 0;
         if( $i % 2 === 0){
@@ -109,7 +109,7 @@ class Slider extends Component {
             slider  = (
             <div className="img-slider">
                 <div className="container">
-                    <div id="slider" className="rounded">
+                    <div className="slider-container">
                         {Next}
                         <div className="slides">
                             {img}
