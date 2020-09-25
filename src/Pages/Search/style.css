@@ -1,66 +1,55 @@
-.filter{
-    position: relative;
-    min-height: 60px;
+.filter {
+  position: relative;
+  min-height: 60px;
+}
+.filter input[type=range] {
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  padding: inherit;
+  -webkit-appearance: none;
+  background: none;
+}
+.filter input[type=range]:nth-child(1)::-webkit-slider-thumb {
+  z-index: 2;
+}
+.filter input[type=range]:nth-child(2)::-webkit-slider-runnable-track {
+  background: none;
+}
+.filter input[type=range]::-webkit-slider-thumb {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  margin-top: -7px;
+  background: #fff;
+  border: 1px solid #003D7C;
+  border-radius: 25px;
+  z-index: 1;
+}
+.filter input[type=range]::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 1px;
+  background: #003D7C;
+}
+.filter .range-price {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  margin-top: -5px;
+  padding: 0px 11px;
+}
+.filter .range-price input {
+  position: absolute;
+  left: 0;
+  top: 0%;
+}
+.filter .range-price .range-max, .filter .range-price .range-min {
+  display: inline-block;
+  position: relative;
+  margin-top: 25px;
+  font-size: 10pt;
 }
 
-
-input[type='range'] {
-    height: 30px;
-    width: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    outline: none;
-    padding: inherit;
-}
-input[type='range'],
-input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background: none;
-}
-input[type='range']::-webkit-slider-runnable-track {
-    width: 200px;
-    height: 1px;
-    background: #003D7C;
-}
-
-input[type='range']:nth-child(2)::-webkit-slider-runnable-track{
-    background: none;
-}
-
-input[type='range']::-webkit-slider-thumb {
-    position: relative;
-    height: 15px;
-    width: 15px;
-    margin-top: -7px;
-    background: #fff;
-    border: 1px solid #003D7C;
-    border-radius: 25px;
-    z-index: 1;
-}
-
-
-input[type='range']:nth-child(1)::-webkit-slider-thumb{
-    z-index: 2;
-}
-
-.range-price{
-    position: relative;
-    width: 100%;
-    display: inline-block;
-    margin-top: -5px;
-    padding: 0px 11px;
-}
-.range-price input{
-    position: absolute;
-    left: 0;
-    top: 0%;
-}
-
-.range-price .range-max,
-.range-price .range-min{
-    display: inline-block;
-    position: relative;
-    margin-top: 25px;
-    font-size: 10pt;
-}
+/*# sourceMappingURL=style.css.map */

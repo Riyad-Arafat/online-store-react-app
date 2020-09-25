@@ -81,7 +81,7 @@ class ProductInfo extends Component{
         }
         return(
             <div className='container-fluid mt-4 p-4 bg-white'>
-                <div className="row justify-content-center">
+                <div className="p-details row justify-content-center">
                     <div className="col-lg-6">
                         <div className="row row-cols-1 justify-content-center mb-5">
                             
