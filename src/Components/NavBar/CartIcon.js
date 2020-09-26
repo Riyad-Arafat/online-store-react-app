@@ -43,15 +43,16 @@ class Cart extends Component{
         const Cart = styled.div`
             position: relative;
             font-size: 15pt;
-            ::before{
+            padding-inline-end: 25px;
+            padding-inline-start: 0;
+            &:before{
                 content: "${num}";
                 position: absolute;
-                top: 0px;
-                left: -20px;
-                background: red;
-                color: #ffff;
-                padding: 0px 10px;
-                border-radius: 100%;
+                top: -4px;
+                left: 22px;
+                color: #ff0000;
+                font-weight: 700;
+                font-size: 23px;
             }
         `;
 
@@ -85,23 +86,25 @@ class Cart extends Component{
 
         ///// Return Items That is in Cart
         const items = this.props.cart;
-        var item  = items.map(item => {
-            return(
-                <Item href={`/product/${item.id}`} key={item.id}>
-                    <div  className="overflow-hidden rounded p-2">
-                        <img style={img} className="img-fluid" src={item.img[0]} alt={item.id} />
-                    </div>
-                    <div className="title" >
-                        <h5 className="m-0">{item.title}</h5>
-                        <span className="price">{item.fPrice } <span className="currency-text">EGP</span></span>
-                    </div>
-                </Item>
-            )
-        })
+        
         if(items.length > 0){
             var view_btn =(
                 <a href="/shopping_cart" className="view-cart btn btn-block btn-secondary">View Cart</a>
             )
+            var item  = items.map(item => {
+         
+                return(
+                    <Item href={`/product/${item.id}`} key={item.id}>
+                        <div  className="overflow-hidden rounded p-2">
+                            <img style={img} className="img-fluid" src={item.img[0]} alt={item.id} />
+                        </div>
+                        <div className="title" >
+                            <h5 className="m-0">{item.title}</h5>
+                            <span className="price">{item.fPrice } <span className="currency-text">EGP</span></span>
+                        </div>
+                    </Item>
+                )
+            })
         }else{
             item   = (
                 <div className="d-flex justify-content-center">

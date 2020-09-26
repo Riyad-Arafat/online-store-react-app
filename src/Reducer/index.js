@@ -1,6 +1,6 @@
 import {createStore, combineReducers} from 'redux';
 
-import {bake_cookie, read_cookie} from 'sfcookies'
+import { bake_cookie, read_cookie, delete_cookie } from 'sfcookies'
 
 import {ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL_CART} from '../Actions/AcrionType';
 import "../Actions";
@@ -16,30 +16,28 @@ import phone from './../images/phone.png';
  from Cart
  */
 
-const cartItems = [];
-const cart = (state = cartItems , action) => {
-    let cart = null;
+const cart = (state = {} , action) => {
     state = read_cookie("cart");
     switch (action.type){
         case ADD_TO_CART:
-            cart = [...state, action.item];
-            state = cart;
-            bake_cookie('cart', cart);
+            state = [...state,action.item];
+            bake_cookie('cart', state);
+            console.log('from add')
             break;
 
         case REMOVE_FROM_CART:
-            cart = state.filter(item => item.id !== action.item.id)
-            state = cart;
-            bake_cookie('cart', cart);
+            state = state.filter(item => item.id !== action.item.id)
+            bake_cookie('cart', state);
+            console.log('from remove')
             break;
 
         case REMOVE_ALL_CART:
-            cart = []
-            state = cart;
-            bake_cookie('cart', cart);
+            state = []
+            delete_cookie('cart');
             break;
         default:
             bake_cookie('cart', state);
+            break;
 
     }
     return state
