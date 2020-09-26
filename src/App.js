@@ -13,6 +13,7 @@ import CartPage from './Pages/CartPage';
 import ProductDetails from './Pages/ProductDetails';
 import Section from './Pages/Section';
 import SearchPage from './Pages/Search';
+import NotFound from './Pages/NotFoundPage';
 
 class App extends Component {
   render(){
@@ -23,11 +24,12 @@ class App extends Component {
           <SideNav />
           <Switch>
             <Route exact path="/" component= {Home} />
-            <Route path="/shopping_cart" component= {CartPage} />
-            <Route path="/product/:item_id" component= {ProductDetails} neam="dsad" />
-            <Route path="/section/:section" component= {Section} />
+            <Route exact path="/shopping_cart" component= {CartPage} />
+            <Route exact path="/product/:item_id" component= {ProductDetails} neam="dsad" />
+            <Route exact path="/section/:section" component= {Section} />
             <Route exact path="/search/q=:q" component= {SearchPage} />
-            <Route path="/search/q=:q/price/min=:min/max=:max" component= {SearchPage} />
+            <Route exact path="/search/q=:q/price/min=:min/max=:max" component= {SearchPage} />
+            <Route component={NotFound} />
           </Switch>
           <Footer />
         </div>
