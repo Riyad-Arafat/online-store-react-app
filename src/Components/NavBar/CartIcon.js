@@ -94,9 +94,9 @@ class Cart extends Component{
             var item  = items.map(item => {
          
                 return(
-                    <Item href={`/product/${item.id}`} key={item.id}>
+                    <Item href={`/product/${item.id}`} key={Math.random()}>
                         <div  className="overflow-hidden rounded p-2">
-                            <img style={img} className="img-fluid" src={item.img[0]} alt={item.id} />
+                            <img style={img} className="img-fluid" src={item.img} alt={item.id} />
                         </div>
                         <div className="title" >
                             <h5 className="m-0">{item.title}</h5>

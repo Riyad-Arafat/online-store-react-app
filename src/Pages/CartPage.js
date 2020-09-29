@@ -6,7 +6,13 @@ import {connect} from 'react-redux';
 import {remove_from_cart, remove_all_cart} from '../Actions';
 
 
+
+
 class Cart extends Component {
+    state = {
+        docs :[]
+    }
+
 
     render()
     {
@@ -15,13 +21,13 @@ class Cart extends Component {
             remove_all  =   null;
         const items     = this.props.cart;
         var   item      = items.map(item => {
-            totle += item.price;
+            totle += item.fPrice;
             return(
-                <div className="mt-4" key={item.id}>
+                <div className="mt-4" key={Math.random()}>
                     <div className="row">
                         <div className="col-4 overflow-hidden p-0">
                             <a href={`/product/${item.id}`} className="rounded">
-                                <img className="img-fluid" src={item.img[0]} alt={item.id} />
+                                <img className="img-fluid" src={item.img} alt={item.id} />
                             </a> 
                         </div>
                         <div className="col d-flex flex-column align-self-center">
@@ -69,6 +75,8 @@ class Cart extends Component {
             )
         }
 
+        
+
         return(
             <main className="mb-5 pb-5">
                 <div className="container mb-5 pb-5">
@@ -93,7 +101,9 @@ class Cart extends Component {
 
 function mapSteteToProps(state){
     return{
-        cart: state.cart
+        cart: state.cart,
+        products : state.products,
+        firestore: state.firestore
     }
 
 }
