@@ -4,7 +4,7 @@ import firebase from '../Firebase/config';
 import "../Actions";
 
 
-import {cart} from './ChartShopping'
+import cart from './ChartShopping'
 import {products} from './Products';
 
 // Section Data

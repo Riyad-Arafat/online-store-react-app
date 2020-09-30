@@ -9,9 +9,6 @@ import {remove_from_cart, remove_all_cart} from '../Actions';
 
 
 class Cart extends Component {
-    state = {
-        docs :[]
-    }
 
 
     render()

@@ -11,12 +11,12 @@ import Reviews from './Components/Reviews';
 class ProductPage extends Component{
     render()
     {
-        const item = this.props.match.params.item_id;
+        const itemId = this.props.match.params.item_id;
         return(
 
             <Fragment>
-                <Product item={item} />
-                <Reviews product_id={item} />
+                <Product itemId={itemId} />
+                <Reviews product_id={itemId}  />
                 <Related name="Relate Products" />
             </Fragment>
         )

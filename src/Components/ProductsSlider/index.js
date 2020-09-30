@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import $ from "jquery";
 import './style.css';
@@ -11,12 +11,6 @@ import {add_to_cart, remove_from_cart} from './../../Actions';
 
 
 function ProductsSlider() {
-    const dispatch = useDispatch();
-    const stateProducts = useSelector(state => state.products);
-    const cart          = useSelector(state => state.cart);
-    const [products, setProducts] = useState(stateProducts);
-    var product;
-
     // slice Big Title of Item
     const sliceTitle = () => {
         var $title = $(".card-title");
@@ -61,20 +55,17 @@ function ProductsSlider() {
     
     };
 
-
+    const dispatch = useDispatch();
+    const products = useSelector(state => state.products);
+    const cart          = useSelector(state => state.cart);
+    var product;
     useEffect(() => {
         sliceTitle();
         btnVisable();
-        // Convert Promise to Data Vlue To return Products from Reducer-Firebase
-        var p1 = new Promise((resolve) => {
-            resolve(products);
-        });
-        p1.then((arr)=> {
-            setProducts(arr);
-        })
     }, [products])
 
     if (products.length){
+
         product = products.map( item => { 
             // Check if product-Item Exists in Cart 
             if(cart.some(i => i.id === item.id)){
@@ -95,9 +86,9 @@ function ProductsSlider() {
                 );
             }
             return(
-                <div key={products.indexOf(item)} className="card my-card">
+                <div key={item.id} className="card my-card">
                     <a href={`/product/${item.id}`} >
-                        <div className="my-card-img"><img src={`${item.img}`} alt={item.id}/></div>
+                        <div className="my-card-img"><img src={item.img[0]} alt={item.id}/></div>
                         <div className="card-body">
                             <div className="card-title">{item.title}</div>
                             <div className="item-rate">
@@ -113,8 +104,6 @@ function ProductsSlider() {
             )
         })
     }
-
-
 // The main Return
     return(
         <div className="p-products">
