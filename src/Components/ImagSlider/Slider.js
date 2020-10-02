@@ -4,7 +4,6 @@ import './style.css';
 
 
 class Slider extends Component {
-
     centrSlides = () => {
         const $slides   = $(".slider-container .slides");
         var $i          = $($slides).find('.slide-item').length,

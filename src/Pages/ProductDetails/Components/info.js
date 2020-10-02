@@ -10,16 +10,12 @@ import {add_to_cart, remove_from_cart} from '../../../Actions';
 
 
 function ProductInfo(props) {
-    const itemId   = props.itemId;
     const dispatch = useDispatch();
-    const products = useSelector(state => state.products);
+    const product = props.product;
     const cart     = useSelector(state => state.cart);
-    var product;
 
-
-    if (products.length){
-        product = products.filter(item => item.id === +itemId)[0]
-        var was,features, left;
+    if (product){
+        var was, features, left;
         if(product.sale > 0){
             was = (
                 <div>
@@ -53,7 +49,6 @@ function ProductInfo(props) {
                 <div className="text-danger font-weight-bold under-boreder">Only {product.left} left in stock!</div>
             )
         }
-
         //// ADD and REMOVE from Cart 
         if(cart.some(i => i.id === product.id)){
             var action = (
@@ -73,7 +68,7 @@ function ProductInfo(props) {
             );
         }
     }
-    
+
     return(
         <div className='container-fluid mt-4 p-4 bg-white'>
             <div className="p-details row justify-content-center">

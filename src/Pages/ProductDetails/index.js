@@ -1,5 +1,6 @@
-import React, {Component, Fragment } from 'react';
-import {connect} from 'react-redux';
+import React, {Fragment } from 'react';
+import { useSelector } from 'react-redux'
+
 
 
 // Components 
@@ -8,20 +9,22 @@ import Related from './../../Components/ProductsSlider';
 import Reviews from './Components/Reviews';
 
 
-class ProductPage extends Component{
-    render()
-    {
-        const itemId = this.props.match.params.item_id;
-        return(
+function ProductPage(props){
+    const allProducts     = useSelector(state => state.products);
+    const itemId          = props.match.params.item_id;
 
-            <Fragment>
-                <Product itemId={itemId} />
-                <Reviews product_id={itemId}  />
-                <Related name="Relate Products" />
-            </Fragment>
-        )
-    }
+    const product = allProducts.filter(item => item.id === +itemId)[0]
+
+
+    return(
+        <Fragment>
+            <Product product={product} />
+            <Reviews product={product}  />
+            <Related name="Relate Products" />
+        </Fragment>
+    )
+
 }
 
 
-export default connect()(ProductPage);
+export default ProductPage;

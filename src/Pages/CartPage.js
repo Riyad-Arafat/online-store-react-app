@@ -24,7 +24,7 @@ class Cart extends Component {
                     <div className="row">
                         <div className="col-4 overflow-hidden p-0">
                             <a href={`/product/${item.id}`} className="rounded">
-                                <img className="img-fluid" src={item.img} alt={item.id} />
+                                <img className="img-fluid" src={item.img[0]} alt={item.id} />
                             </a> 
                         </div>
                         <div className="col d-flex flex-column align-self-center">
